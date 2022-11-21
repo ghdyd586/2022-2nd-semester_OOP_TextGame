@@ -1,7 +1,5 @@
 package Package01;
 
-import java.util.Scanner;
-
 public class MiniGame1 {
 	private double mg1score;
 	public int stagecnt;
@@ -10,7 +8,7 @@ public class MiniGame1 {
 	public long elapsedtime;
 	public String useranswer;
 	StringBuffer answer = new StringBuffer();
-	Scanner input = new Scanner(System.in);
+	GetToolandPlace g1 = new GetToolandPlace();
 
 	String[] IdiomList = { "오매", "삼고", "과유", "사면", "유비", "고진", "낙화", "부화", "오비", "아전" };
 	String[] AnswerList = { "불망", "초려", "불급", "초가", "무환", "감래", "유수", "뇌동", "이락", "인수" };
@@ -42,7 +40,7 @@ public class MiniGame1 {
 			System.out.println("    문제는 총 10문제 이며, \n    문제는 연속으로 주어진다.");
 			System.out.println(" 게임을 시작하시려면 y를 입력해 주세요. : ");
 			System.out.println("└───────────────────────────────┘");
-			if ((input.next()).charAt(0) == 'y') {
+			if ((Main.input.next()).charAt(0) == 'y') {
 				this.MG1Loading();
 				this.SetScore();
 				this.MG1Game1();
@@ -89,7 +87,7 @@ public class MiniGame1 {
 					System.out.println("         최대 3배까지\n       점수를 획득할 수 있어요~");
 					System.out.println("   계속 하시려면 y를 입력 후 엔터\n   를 눌러주세요~ : ");
 					System.out.println("└────────────────────────┘");
-					if ((input.next()).charAt(0) == 'y') {
+					if ((Main.input.next()).charAt(0) == 'y') {
 						this.MG1Loading();
 						break;
 					} else {
@@ -105,7 +103,7 @@ public class MiniGame1 {
 			System.out.println("          " + this.answer);
 			System.out.println("└────────────────────────┘");
 			System.out.print("정답 입력 :");
-			this.useranswer = input.next();
+			this.useranswer = Main.input.next();
 			this.endtime = System.currentTimeMillis();
 			if (this.useranswer.equals(AnswerList[stagecnt])) {
 				this.elapsedtime = (endtime - starttime) / 1000;
@@ -152,5 +150,14 @@ public class MiniGame1 {
 		System.out.println("     미 니 게 임 1 결 과");
 		System.out.println("     획 득 점 수 : " + this.mg1score);
 		System.out.println("└────────────────────────┘");
+		if (this.mg1score >= 100) {
+			g1.findtool1();
+		} else if (this.mg1score >= 70) {
+			g1.findtool2();
+		} else {
+			g1.findtool3();
+		}
+		g1.printtool();
+		Player.pr.TalkwithTree();
 	}
 }
