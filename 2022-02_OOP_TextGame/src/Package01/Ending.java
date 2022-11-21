@@ -36,21 +36,21 @@ public class Ending {
 
 	void showFinal() {
 		TreeArray TA = new TreeArray();
-
+		Player p1 = new Player();
 		System.out.println("  . . .");
 		System.out.println("  . . .");
 
-		System.out.printf(" -%s-\n", tree());
+		System.out.printf("-%s-\n", tree());
 
 		System.out.println(TA.OrdinaryTree[9]);
-		System.out.printf("%s(이)가 심었던 %s는 %s가 되었다!!\n", Opening.p1.GetPlayerName(), "treename", tree);
+		System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", "username", "treename", tree);
 
 		System.out.println();
 		System.out.println("┌───────────────────────────────┐");
 		System.out.println(" KMU 나무 키우기 경진대회");
 		System.out.println();
 		System.out.println("             상   장");
-		System.out.println("                       " + Opening.p1.GetPlayerName());
+		System.out.println("                       " + p1.GetPlayerName());
 		System.out.println();
 		System.out.println("   본 학생은 treename을 " + tree + "로");
 		System.out.println();
