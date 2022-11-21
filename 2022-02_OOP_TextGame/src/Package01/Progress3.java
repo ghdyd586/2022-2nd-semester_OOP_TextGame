@@ -5,7 +5,7 @@ public class Progress3 extends Progress {
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 7단계");
 		System.out.println(t.OrdinaryTree[6]);
-		System.out.println(" 나무에 가지가 점점 많아지고 있다.");
+		System.out.printf(" %s의 가지가 점점 많아지고 있다.\n", p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("무얼 해줄 수 있을까?\n세 개의 선택지 중 골라보자(숫자만 입력) : ");
 		System.out.println("┌────────────────────────┐");
@@ -63,14 +63,14 @@ public class Progress3 extends Progress {
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 9단계");
 		System.out.println(t.OrdinaryTree[8]);
-		System.out.println(" 나무 : 얼마 안남았어! 좀만 힘내!");
+		System.out.printf(" %s : 얼마 안남았어! 좀만 힘내! \n", p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
 
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 10단계");
 		System.out.println(t.OrdinaryTree[9]);
-		System.out.println("    나무 : 그동안 고생많았어!!");
+		System.out.printf("    %s : 그동안 고생많았어!!\n", p.treename);
 		System.out.println("└────────────────────────┘");
 		while (true) {
 			System.out.println("나무가 다 자랐습니다.\n엔딩을 보러가시겠습니까?(y/n)");

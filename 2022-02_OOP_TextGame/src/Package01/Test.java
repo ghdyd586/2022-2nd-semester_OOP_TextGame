@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		Ending e = new Ending();
-		Place p = new Place();
+		PlaceandTreename p = new PlaceandTreename();
 
 		// p.setPlace();
 		// System.out.print("총능력치 : ");
