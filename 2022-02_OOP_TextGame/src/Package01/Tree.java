@@ -30,6 +30,6 @@ class TreeArray {
 			"   \\|\n    |/\n  \\ |  \n  \\\\|/  \n   \\| /\n    |/\n -------",
 			"   \\|  \n    |/ \n  \\ |  \n  \\\\|/  \n   \\| / \n    |/\n -------",
 			"   \\|  \n    |/ \n  \\ |  \n  \\\\|/  \n   \\| / \n    |/\n -------" };
-	String[] FlowerTree = { "" };
-	String[] FlowerandFruitTree = { "" };
+	String FlowerTree = "    @\n  @ @@\n  @ @@\n   \\| @\n  @ |/ \n @\\ | @\n  \\\\|/ @\n   \\| / \n    |/\n -------";
+	String FlowerandFruitTree = "    @\n  @.@@\n  .\\|.@\n .@ |/.\n @\\ |.@\n .\\\\|/.@\n   \\| /.\n    |/\n -------";
 }

@@ -53,30 +53,18 @@ public class MiniGame1 {
 
 	public void MG1Loading() {
 		System.out.println("3초 후에 시작합니다.");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println("게임 화면 이동중.");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println("게임 화면 이동중...");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println("게임 화면 이동중.....");
 
 	}
 
 	public void MG1Game1() {
 		System.out.println("게임 시작!");
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(500);
 		for (int i = 0; i < this.IdiomList.length; i++) {
 			this.SetupGame();
 			if (i == 6) {
@@ -97,47 +85,51 @@ public class MiniGame1 {
 			}
 			System.out.println("타이머 시작");
 			this.starttime = System.currentTimeMillis();
-			System.out.println("┌────────────────────────┐");
-			System.out.println("   현재점수 : " + this.mg1score + "점");
-			System.out.printf("          문제 %d.\n", this.stagecnt + 1);
-			System.out.println("          " + this.answer);
-			System.out.println("└────────────────────────┘");
-			System.out.print("정답 입력 :");
-			this.useranswer = Main.input.next();
-			this.endtime = System.currentTimeMillis();
-			if (this.useranswer.equals(AnswerList[stagecnt])) {
-				this.elapsedtime = (endtime - starttime) / 1000;
-				if (i <= 6) {
-					if (this.elapsedtime < 4) {
-						mg1score += 15;
-					} else if (this.elapsedtime < 6) {
-						mg1score += 10;
-					} else if (this.elapsedtime > 10) {
-						mg1score += 0;
-					} else {
-						mg1score += 7;
-					}
-				} else {
-					if (this.elapsedtime < 4) {
-						mg1score += 10;
-					} else if (this.elapsedtime < 6) {
-						mg1score += 7.5;
-					} else if (this.elapsedtime > 10) {
-						mg1score += 0;
-					} else {
-						mg1score += 5;
-					}
-				}
+			while (true) {
 				System.out.println("┌────────────────────────┐");
-				System.out.println("          정 답            ");
-				System.out.println("         " + this.IdiomList[this.stagecnt] + this.AnswerList[this.stagecnt]);
-				System.out.println("       소요시간 : " + this.elapsedtime + "초");
-				System.out.println("     현재점수 : " + this.mg1score + "점");
-				System.out.println("└────────────────────────┘\n");
-				this.stagecnt++;
+				System.out.println("   현재점수 : " + this.mg1score + "점");
+				System.out.printf("          문제 %d.\n", this.stagecnt + 1);
+				System.out.println("          " + this.answer);
+				System.out.println("└────────────────────────┘");
+				System.out.print("정답 입력 :");
+				this.useranswer = Main.input.next();
+				this.endtime = System.currentTimeMillis();
+				if (this.useranswer.equals(AnswerList[stagecnt])) {
+					this.elapsedtime = (endtime - starttime) / 1000;
+					if (i <= 6) {
+						if (this.elapsedtime < 4) {
+							mg1score += 15;
+						} else if (this.elapsedtime < 6) {
+							mg1score += 10;
+						} else if (this.elapsedtime > 10) {
+							mg1score += 0;
+						} else {
+							mg1score += 7;
+						}
+					} else {
+						if (this.elapsedtime < 4) {
+							mg1score += 10;
+						} else if (this.elapsedtime < 6) {
+							mg1score += 7.5;
+						} else if (this.elapsedtime > 10) {
+							mg1score += 0;
+						} else {
+							mg1score += 5;
+						}
+					}
+					System.out.println("┌────────────────────────┐");
+					System.out.println("          정 답            ");
+					System.out.println("         " + this.IdiomList[this.stagecnt] + this.AnswerList[this.stagecnt]);
+					System.out.println("       소요시간 : " + this.elapsedtime + "초");
+					System.out.println("     현재점수 : " + this.mg1score + "점");
+					System.out.println("└────────────────────────┘\n");
+					this.stagecnt++;
+					Main.pause.GetPause(500);
+					break;
 
-			} else {
-				System.out.println("틀렸습니다. 다시 시도하세요.");
+				} else {
+					System.out.println("틀렸습니다. 다시 시도하세요.");
+				}
 			}
 
 		}
@@ -158,6 +150,8 @@ public class MiniGame1 {
 			g1.findtool3();
 		}
 		g1.printtool();
+		System.out.println("미니게임 1 종료힙니다.");
+		Main.pause.GetPause(1000);
 		Player.pr.TalkwithTree();
 	}
 }

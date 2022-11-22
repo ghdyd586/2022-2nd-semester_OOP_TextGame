@@ -31,7 +31,7 @@ public class Progress2 extends Progress {
 		}
 		System.out.println("미니게임 2로 이동합니다.");
 		// 미니게임 2 클래스 삽입
-
+		Main.pause.GetPause(1500);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 5단계");
 		System.out.println(t.OrdinaryTree[4]);
@@ -42,7 +42,7 @@ public class Progress2 extends Progress {
 		System.out.println("     남았다. 깔깔.");
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
-
+		Main.pause.GetPause(1500);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 6단계");
 		System.out.println(t.OrdinaryTree[5]);
@@ -53,6 +53,7 @@ public class Progress2 extends Progress {
 		System.out.println("미니게임 3으로 이동합니다.");
 		// 미니게임 3 삽입
 		status += 10;
+		Main.pause.GetPause(1500);
 		this.TalkwithTree();
 	}
 

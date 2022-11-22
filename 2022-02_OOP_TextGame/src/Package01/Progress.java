@@ -5,7 +5,7 @@ public class Progress {
 	Tree TREE = new Tree();
 	Ending e = new Ending();
 	PlaceandTreename p = new PlaceandTreename();
-	TreeArray t = new TreeArray();
+	static TreeArray t = new TreeArray();
 	MiniGame1 MG1 = new MiniGame1();
 	static Progress2 pr2 = new Progress2();
 	static Progress3 pr3 = new Progress3();
@@ -44,14 +44,14 @@ public class Progress {
 			System.out.println("└────────────────────────┘");
 		}
 		System.out.println("다음 단계로 넘어갑니다.");
-
+		Main.pause.GetPause(1500);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("      나무의 대화 2단계");
 		System.out.println(t.OrdinaryTree[1]);
 		System.out.printf(" %s : 국민대는 참 좋은 학교야~\n", p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
-
+		Main.pause.GetPause(1500);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("     나무의 대화 3단계");
 		System.out.println(t.OrdinaryTree[2]);
@@ -67,6 +67,7 @@ public class Progress {
 		}
 		System.out.println("다음 단계로 넘어갑니다.");
 		status += 10;
+		Main.pause.GetPause(1500);
 		this.TalkwithTree();
 	}
 

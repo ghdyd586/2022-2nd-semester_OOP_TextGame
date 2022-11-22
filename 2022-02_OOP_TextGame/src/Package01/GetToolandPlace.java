@@ -34,22 +34,34 @@ public class GetToolandPlace extends Player {
 
 	public void printtool() {
 		if (this.tool1get == true) {
+			Main.pause.GetPause(500);
 			System.out.println("┌───────────────────────────────────────┐");
+			Main.pause.GetPause(500);
 			System.out.println(
 					"┈┈▕▇▇▆▆\n┈┈▕▂    ▂▏\n┈┈▕┻▏┻▕╮\n┈┈▕   ▔  ▕ ╯\n┈╭━╲▔▔▕╭━━━╮\n╱▔╲ ╲▔▔▔▔╱ ╱▔▔╲ ╰╮\n▏ ┈╱▇▇▇▇╲┈┈▕╮┃\n▏ ▏  ╲ ▇▅▅ ┈╱┈▏▕┃╰╮\n▏ ▏ ┈╲▅▉ ╱┈┈▏▕╰╮┃\n▏ ╲┈┈╲╱┈┈┈▏▕╮┃╰╮");
+			Main.pause.GetPause(500);
 			System.out.println("최고의 동료이자 슈퍼 히어로 " + this.tool1 + "를 획득했다!");
+			Main.pause.GetPause(500);
 			System.out.println("└───────────────────────────────────────┘");
 		}
 		if (this.tool2get == true) {
+			Main.pause.GetPause(500);
 			System.out.println("┌───────────────────────────────────────┐");
+			Main.pause.GetPause(500);
 			System.out.println(" /▔▔▔▔▔▔▔▔▔/|\n/_____________/ |\n|     └─┘     | /\n|_____________|/");
+			Main.pause.GetPause(500);
 			System.out.println("이것만 있으면 나도 전문가! " + this.tool2 + "를 획득했다!");
+			Main.pause.GetPause(500);
 			System.out.println("└───────────────────────────────────────┘");
 		}
 		if (this.tool3get == true) {
+			Main.pause.GetPause(500);
 			System.out.println("┌───────────────────────────────────────┐");
+			Main.pause.GetPause(500);
 			System.out.println("  ⌒      _T____ . • . •  °\n / \\    // ￣\\￣  °  ° • .\n/ | \\  //\\   / \n￣凵￣ ￣  ￣￣");
+			Main.pause.GetPause(500);
 			System.out.println("조금 아쉽지만 이게 어디야~ " + this.tool3 + "를 획득했다!");
+			Main.pause.GetPause(500);
 			System.out.println("└───────────────────────────────────────┘");
 		}
 	}

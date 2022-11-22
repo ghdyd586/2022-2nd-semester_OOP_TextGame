@@ -28,25 +28,13 @@ public class Opening {
 		System.out.println("@                               @");
 		System.out.println("@   >>잠시 후 타이틀로 이동합니다.<<    @");
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println("이동중.");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println("이동중..");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println("이동중...");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println("이동중....");
 		System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 		this.title();

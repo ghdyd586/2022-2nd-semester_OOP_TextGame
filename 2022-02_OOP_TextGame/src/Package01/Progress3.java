@@ -30,7 +30,7 @@ public class Progress3 extends Progress {
 			}
 		}
 		System.out.println("다음 단계로 넘어갑니다.");
-
+		Main.pause.GetPause(1000);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 8단계");
 		System.out.println(t.OrdinaryTree[7]);
@@ -59,19 +59,20 @@ public class Progress3 extends Progress {
 			}
 		}
 		System.out.println("다음 단계로 넘어갑니다.");
-
+		Main.pause.GetPause(1000);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 9단계");
 		System.out.println(t.OrdinaryTree[8]);
 		System.out.printf(" %s : 얼마 안남았어! 좀만 힘내! \n", p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
-
+		Main.pause.GetPause(1000);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 10단계");
 		System.out.println(t.OrdinaryTree[9]);
 		System.out.printf("    %s : 그동안 고생많았어!!\n", p.treename);
 		System.out.println("└────────────────────────┘");
+		Main.pause.GetPause(700);
 		while (true) {
 			System.out.println("나무가 다 자랐습니다.\n엔딩을 보러가시겠습니까?(y/n)");
 			char choose1 = (Main.input.next()).charAt(0);

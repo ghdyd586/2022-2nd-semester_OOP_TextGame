@@ -35,42 +35,28 @@ public class Ending {
 	}
 
 	void showFinal() {
-		TreeArray TA = new TreeArray();
-		Player p1 = new Player();
 		System.out.println("  . . .");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
+		Main.pause.GetPause(1000);
 		System.out.println();
 		System.out.println("  . . .");
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-		}
-
+		Main.pause.GetPause(1000);
+		System.out.println();
+		System.out.println("  . . .");
+		Main.pause.GetPause(1000);
+		
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.printf("-%s-\n", tree());
+		System.out.printf("  -%s-\n", tree());
 		System.out.println();
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-		}
-
-		System.out.println(TA.OrdinaryTree[9]);
-		try {
-			Thread.sleep(100);
-		} catch (InterruptedException e) {
-		}
-
+		Main.pause.GetPause(500);
+		
+		System.out.println(Progress.t.OrdinaryTree[9]);
+		Main.pause.GetPause(100);
+		
 		if (FinalScore >= 10) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", p1.GetPlayerName(), p.GetTreename(), tree);
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-			}
+			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", Opening.p1.GetPlayerName(), p.GetTreename(), tree);
+			Main.pause.GetPause(1000);			
 
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
@@ -78,7 +64,7 @@ public class Ending {
 			System.out.println();
 			System.out.println("             상   장");
 			System.out.println("                          대상     ");
-			System.out.println("                       " + p1.GetPlayerName());
+			System.out.println("                       " + Opening.p1.GetPlayerName());
 			System.out.println();
 			System.out.println("   본 학생은 " + p.treename + "을(를) " + tree + "로");
 			System.out.println();
@@ -91,15 +77,16 @@ public class Ending {
 		}
 
 		else if (FinalScore > 8 && FinalScore < 10) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", p1.GetPlayerName(), p.treename, tree);
-
+			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", Opening.p1.GetPlayerName(), p.treename, tree);
+			Main.pause.GetPause(1000);
+			
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
 			System.out.println(" KMU 나무 키우기 경진대회");
 			System.out.println();
 			System.out.println("             상   장");
 			System.out.println("                       최우수상     ");
-			System.out.println("                       " + p1.GetPlayerName());
+			System.out.println("                       " + Opening.p1.GetPlayerName());
 			System.out.println();
 			System.out.println("    본 학생은 " + p.treename + "을(를) " + tree + "로");
 			System.out.println();
@@ -112,15 +99,16 @@ public class Ending {
 		}
 
 		else if (FinalScore > 5 && FinalScore < 8) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다!\n", p1.GetPlayerName(), p.treename, tree);
-
+			System.out.printf("%s가 심었던 %s는 %s가 되었다!\n", Opening.p1.GetPlayerName(), p.treename, tree);
+			Main.pause.GetPause(1000);
+			
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
 			System.out.println(" KMU 나무 키우기 경진대회");
 			System.out.println();
 			System.out.println("             상   장");
 			System.out.println("                       우수상     ");
-			System.out.println("                       " + p1.GetPlayerName());
+			System.out.println("                       " + Opening.p1.GetPlayerName());
 			System.out.println();
 			System.out.println("    본 학생은 " + p.treename + "을(를) " + tree + "로");
 			System.out.println();
@@ -133,15 +121,16 @@ public class Ending {
 		}
 
 		else if (FinalScore < 5) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다.....\n", p1.GetPlayerName(), p.treename, tree);
-
+			System.out.printf("%s가 심었던 %s는 %s가 되었다.....\n", Opening.p1.GetPlayerName(), p.treename, tree);
+			Main.pause.GetPause(1000);
+			
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
 			System.out.println(" KMU 나무 키우기 경진대회");
 			System.out.println();
 			System.out.println("             상   장");
 			System.out.println("                       장려상     ");
-			System.out.println("                       " + p1.GetPlayerName());
+			System.out.println("                       " + Opening.p1.GetPlayerName());
 			System.out.println();
 			System.out.println("    본 학생은 " + p.treename + "을(를) " + tree + "로");
 			System.out.println();
@@ -152,10 +141,39 @@ public class Ending {
 			System.out.println("                        ★★☆☆☆");
 			System.out.println("└───────────────────────────────┘");
 		}
+		this.endingCredit();
 
 	}
 
 	void endingCredit() {
-
+		System.out.println("┌─────────────────────────────────────────┐");
+		System.out.println("                역할 분배\n");
+		Main.pause.GetPause(700);
+		System.out.println("              기획,제작 : 호우우팀");
+		Main.pause.GetPause(700);
+		System.out.println("  오프닝,플레이어 정보,미니게임1,나무와의 대화 : 정호용");
+		Main.pause.GetPause(700);
+		System.out.println("   엔딩,나무이름 짓기, 미니게임2, 장소정하기 : 현진우");
+		Main.pause.GetPause(700);		
+		System.out.println("       미니게임 3, 실패 엔딩 ....... : 최우정");
+		Main.pause.GetPause(700);
+		System.out.println("          감  사  합  니  다 !  !  ");
+		Main.pause.GetPause(700);
+		System.out.println("  ░░★░░░░░█▄░▄█ █▀▀░█▀█░█▀█░█░█░░░★░░░░░░");
+		Main.pause.GetPause(700);
+		System.out.println("  ░░░░░★░░█░▀░█ █▀▀░██▀░██▀░▀█▀░░░░░░★░░░");
+		Main.pause.GetPause(700);
+		System.out.println("  ░░★░░░░░▀░░░▀ ▀▀▀░▀░▀░▀░▀░░▀░░░░★░░░░░░");
+		Main.pause.GetPause(700);
+		System.out.println("  ░░█▀▀░█░█ █▀█░█░█▀▀░▀█▀ █▄░▄█ █▀█░█▀▀░░");
+		Main.pause.GetPause(700);
+		System.out.println("  ░░█░░░█▀█ ██▀░█░▀▀█░░█░ █░▀░█ █▀█░▀▀█░░");
+		Main.pause.GetPause(700);
+		System.out.println("  ░░▀▀▀░▀░▀ ▀░▀░▀░▀▀▀░░▀░ ▀░░░▀ ▀░▀░▀▀▀░░");
+		Main.pause.GetPause(700);
+		System.out.println("└─────────────────────────────────────────┘");
+		Main.pause.GetPause(2000);
+		System.out.println("게임을 종료합니다.");
+		System.exit(0);
 	}
 }
