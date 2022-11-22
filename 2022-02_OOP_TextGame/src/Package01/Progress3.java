@@ -70,7 +70,7 @@ public class Progress3 extends Progress {
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 10단계");
 		System.out.println(t.OrdinaryTree[9]);
-		System.out.printf("    %s : 그동안 고생많았어!!\n", p.treename);
+		System.out.printf("   %s : 그동안 고생많았어!!\n", p.treename);
 		System.out.println("└────────────────────────┘");
 		Main.pause.GetPause(700);
 		while (true) {

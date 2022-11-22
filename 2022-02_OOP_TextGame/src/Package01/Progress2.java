@@ -29,7 +29,25 @@ public class Progress2 extends Progress {
 				System.out.println("잘못 입력했다. 해당 선택지의 숫자만 눌러야 한다. 다시 해보자.");
 			}
 		}
+		System.out.println("\n");
+		Main.pause.GetPause(1500);
+		System.out.println("┌──────────────┐");
+		System.out.printf("    %s :♪ ♪\n", p.treename);
+		System.out.println("└──────────────┘");
+		Main.pause.GetPause(600);
+		System.out.println("\n..?");
+		System.out.println();
+		Main.pause.GetPause(600);
+		System.out.printf("%s(이)가 노래를 흥얼거리고 있다.\n", p.treename);
+		Main.pause.GetPause(500);
+
 		System.out.println("미니게임 2로 이동합니다.");
+		Main.pause.GetPause(100);
+		System.out.println();
+		System.out.println("\n로딩중...");
+		Main.pause.GetPause(1500);
+		System.out.println("\n\n\n\n\n");
+		MG2.MG2Guide();
 		// 미니게임 2 클래스 삽입
 		Main.pause.GetPause(1500);
 		System.out.println("┌────────────────────────┐");
@@ -52,7 +70,6 @@ public class Progress2 extends Progress {
 		System.out.println("└────────────────────────┘");
 		System.out.println("미니게임 3으로 이동합니다.");
 		// 미니게임 3 삽입
-		MG3.MG3Guide();
 		status += 10;
 		Main.pause.GetPause(1500);
 		this.TalkwithTree();

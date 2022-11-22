@@ -21,10 +21,11 @@ public class PlaceandTreename {
 	void getTreename() {
 		Scanner in = new Scanner(System.in);
 		System.out.println("┌──────────────────────────┐");
-		System.out.println("   " + pl.GetPlayerName() + "는 묘목을 받았다 !!");
+		System.out.println("   " + pl.GetPlayerName() + "(은)는 묘목을 받았다 !!");
 		System.out.println("└──────────────────────────┘");
 
-		System.out.print("나무의 이름은 ?? : ");
+		System.out.println("나무의 이름은 ?? ");
+		System.out.print("이름 : ");
 
 		String inputtreename = in.next();
 		if (inputtreename.length() > 6) {
@@ -62,17 +63,23 @@ public class PlaceandTreename {
 		int i = in.nextInt();
 
 		if (i == com[0]) {
-			System.out.println(this.treename + "을(를) 한국에 심기로 결정했다 !! ");
+			System.out.println("┌───────────────────────────────┐");
+			System.out.println(" " + this.treename + "을(를) 한국에 심기로 결정했다 !! ");
+			System.out.println("└───────────────────────────────┘");
 			place = "한국";
 		}
 
 		else if (i == com[1]) {
-			System.out.println(this.treename + "을(를) 러시아에 심기로 결정했다 !! ");
+			System.out.println("┌───────────────────────────────┐");
+			System.out.println(" " + this.treename + "을(를) 러시아에 심기로 결정했다 !! ");
+			System.out.println("└───────────────────────────────┘");
 			place = "러시아";
 		}
 
 		else if (i == com[2]) {
-			System.out.println(this.treename + "을(를) 브라질에 심기로 결정했다 !! ");
+			System.out.println("┌───────────────────────────────┐");
+			System.out.println(" " + this.treename + "을(를) 브라질에 심기로 결정했다 !! ");
+			System.out.println("└───────────────────────────────┘");
 			place = "브라질";
 		} else {
 			this.setPlace();
