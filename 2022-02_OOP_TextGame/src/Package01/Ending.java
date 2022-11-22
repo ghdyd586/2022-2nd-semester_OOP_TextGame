@@ -43,20 +43,20 @@ public class Ending {
 		System.out.println();
 		System.out.println("  . . .");
 		Main.pause.GetPause(1000);
-		
+
 		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.printf("  -%s-\n", tree());
 		System.out.println();
 		Main.pause.GetPause(500);
-		
+
 		System.out.println(Progress.t.OrdinaryTree[9]);
 		Main.pause.GetPause(100);
-		
+
 		if (FinalScore >= 10) {
 			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", Opening.p1.GetPlayerName(), p.GetTreename(), tree);
-			Main.pause.GetPause(1000);			
+			Main.pause.GetPause(1000);
 
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
@@ -79,7 +79,7 @@ public class Ending {
 		else if (FinalScore > 8 && FinalScore < 10) {
 			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", Opening.p1.GetPlayerName(), p.treename, tree);
 			Main.pause.GetPause(1000);
-			
+
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
 			System.out.println(" KMU 나무 키우기 경진대회");
@@ -101,7 +101,7 @@ public class Ending {
 		else if (FinalScore > 5 && FinalScore < 8) {
 			System.out.printf("%s가 심었던 %s는 %s가 되었다!\n", Opening.p1.GetPlayerName(), p.treename, tree);
 			Main.pause.GetPause(1000);
-			
+
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
 			System.out.println(" KMU 나무 키우기 경진대회");
@@ -123,7 +123,7 @@ public class Ending {
 		else if (FinalScore < 5) {
 			System.out.printf("%s가 심었던 %s는 %s가 되었다.....\n", Opening.p1.GetPlayerName(), p.treename, tree);
 			Main.pause.GetPause(1000);
-			
+
 			System.out.println();
 			System.out.println("┌───────────────────────────────┐");
 			System.out.println(" KMU 나무 키우기 경진대회");
@@ -154,8 +154,8 @@ public class Ending {
 		System.out.println("  오프닝,플레이어 정보,미니게임1,나무와의 대화 : 정호용");
 		Main.pause.GetPause(700);
 		System.out.println("   엔딩,나무이름 짓기, 미니게임2, 장소정하기 : 현진우");
-		Main.pause.GetPause(700);		
-		System.out.println("       미니게임 3, 실패 엔딩 ....... : 최우정");
+		Main.pause.GetPause(700);
+		System.out.println("       미니게임 3, 실패 엔딩 , 스코어보드 : 최우정");
 		Main.pause.GetPause(700);
 		System.out.println("          감  사  합  니  다 !  !  ");
 		Main.pause.GetPause(700);
