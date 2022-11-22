@@ -52,6 +52,7 @@ public class Progress2 extends Progress {
 		System.out.println("└────────────────────────┘");
 		System.out.println("미니게임 3으로 이동합니다.");
 		// 미니게임 3 삽입
+		MG3.MG3Guide();
 		status += 10;
 		Main.pause.GetPause(1500);
 		this.TalkwithTree();

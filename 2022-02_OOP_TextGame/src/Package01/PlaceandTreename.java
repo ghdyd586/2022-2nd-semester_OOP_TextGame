@@ -20,8 +20,9 @@ public class PlaceandTreename {
 
 	void getTreename() {
 		Scanner in = new Scanner(System.in);
-
-		System.out.println(pl.GetPlayerName() + "는 묘목을 받았다 !!");
+		System.out.println("┌──────────────────────────┐");
+		System.out.println("   " + pl.GetPlayerName() + "는 묘목을 받았다 !!");
+		System.out.println("└──────────────────────────┘");
 
 		System.out.print("나무의 이름은 ?? : ");
 
