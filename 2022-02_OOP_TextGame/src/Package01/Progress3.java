@@ -41,7 +41,7 @@ public class Progress3 extends Progress {
 			}
 			else if (choose1 == 2)
 			{
-				System.out.println("비료는 사춘기 나무에게 종합비타민 같은 존재이다!\n 근데 나무가 답답해 한다..");
+				System.out.println("비료는 사춘기 나무에게 종합비타민 같은 존재이다!\n근데 나무가 답답해 한다..");
 				Main.pause.GetPause(1500);
 				if(MG1.g1.returntool1() == true)
 				{
@@ -85,13 +85,24 @@ public class Progress3 extends Progress {
 		System.out.printf(" %s : 얼마 안남았어! 좀만 힘내! \n", p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
-		Main.pause.GetPause(2000);
+		System.out.println("9단계 까지 오는 동안 약 1년이 지났다.");
+		Main.pause.GetPause(800);
+		System.out.println(p.treename + "은(는) 아직 꼬마 나무지만");
+		Main.pause.GetPause(800);
+		System.out.println("꽤나 씩씩하고 든든해 보인다.");
+		Main.pause.GetPause(800);
+		System.out.println(p.treename +"가 마지막으로 할 말이 있어 보인다.");
+		Main.pause.GetPause(800);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 10단계");
 		System.out.println(t.OrdinaryTree[9]);
 		System.out.printf("   %s : 그동안 고생많았어!!\n", p.treename);
 		System.out.println("└────────────────────────┘");
 		Main.pause.GetPause(3000);
+		System.out.println("┌────────────────────────┐");
+		System.out.println(Opening.p1.GetPlayerName() +" : 이제 학교에 제출해야 겠다.");
+		System.out.println("└────────────────────────┘");
+		Main.pause.GetPause(1500);
 		while (true) {
 			System.out.println("나무가 다 자랐습니다.\n엔딩을 보러가시겠습니까?(응/아니)");
 			String input = Main.input.next();

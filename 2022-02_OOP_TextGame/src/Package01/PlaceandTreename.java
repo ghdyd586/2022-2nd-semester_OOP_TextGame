@@ -3,12 +3,11 @@ package Package01;
 import java.util.Random;
 import java.util.Scanner;
 
-public class PlaceandTreename {
+public class PlaceandTreename{
 
 	static String place;
 	static String treename;
 	Random r = new Random();
-	Player pl = new Player();
 
 	public String GetTreename() {
 		return this.treename;
@@ -19,15 +18,14 @@ public class PlaceandTreename {
 	}
 
 	void getTreename() {
-		Scanner in = new Scanner(System.in);
 		System.out.println("┌──────────────────────────┐");
-		System.out.println("   " + pl.GetPlayerName() + "(은)는 묘목을 받았다 !!");
+		System.out.println("   " + Opening.p1.GetPlayerName() + "(은)는 묘목을 받았다 !!");
 		System.out.println("└──────────────────────────┘");
 
 		System.out.println("나무의 이름은 ?? ");
 		System.out.print("이름 : ");
 
-		String inputtreename = in.next();
+		String inputtreename = Main.input.next();
 		if (inputtreename.length() > 6) {
 			System.out.println("┌───────────────────────────┐");
 			System.out.println("이름이 너무 길면 나무가 외우기 힘들어한다! \n   6자 이내로 이름을 지어주도록 하자.");

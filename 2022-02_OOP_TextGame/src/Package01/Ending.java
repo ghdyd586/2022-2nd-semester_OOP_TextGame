@@ -1,16 +1,13 @@
 package Package01;
 
-public class Ending {
-
-	int BranchCnt = Opening.p1.GetBranchCnt();
-	int FlowerCnt = Opening.p1.GetFlowerCnt();
-	int FruitCnt = Opening.p1.GetFruitCnt();
-	int FinalScore = FlowerCnt+FruitCnt; // 총능력치 : 열매+꽃
-
+public class Ending extends Player{
+	
+	int FinalScore = this.GetFinalScore(); // 총능력치 : 열매+꽃
 	String tree;
 	PlaceandTreename p = new PlaceandTreename();
 
 	String tree() {
+		this.SetFinalScore();
 		if (p.place.equals("브라질")) {
 			if (FinalScore >= 10)
 				tree = "야자수나무";
@@ -47,7 +44,7 @@ public class Ending {
 		System.out.println();
 		System.out.println("  . . .");
 		Main.pause.GetPause(1000);
-
+		System.out.println("최종점수는 "+ this.FinalScore+"입니다.");
 		System.out.println();
 		System.out.println();
 		System.out.println();
