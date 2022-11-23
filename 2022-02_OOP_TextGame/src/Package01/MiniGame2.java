@@ -182,7 +182,7 @@ public class MiniGame2 {
 
 		System.out.println("┌──────────────────────┐");
 
-		System.out.print("   노래 : ");
+		System.out.println("   노래 : ");
 		usersong = Main.input.next();
 		System.out.println("└──────────────────────┘");
 
@@ -337,7 +337,6 @@ public class MiniGame2 {
 
 	public void play1_2() {
 		File bgm;
-		File c;
 		AudioInputStream stream;
 		AudioFormat format;
 		DataLine.Info info;
