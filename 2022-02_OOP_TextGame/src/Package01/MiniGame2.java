@@ -82,7 +82,7 @@ public class MiniGame2 {
 		usersinger = Main.input.next();
 		System.out.println("└──────────────┘");
 		if (usersinger.equals(SingerList[0])) {
-			System.out.printf("%s : 와 ! %s아는구나 !!\n", pt.treename, usersinger);
+			System.out.printf("%s : 와 ! %s 아는구나 !!\n", pt.treename, usersinger);
 			mg2score = mg2score + 10;
 		} else {
 			System.out.printf("%s : ㅎㅎ헷갈렸구나? \n ", pt.treename);
@@ -98,7 +98,7 @@ public class MiniGame2 {
 			System.out.println("└──────────────┘");
 
 			if (usersinger.equals(SingerList[0])) {
-				System.out.printf("%s : 와 ! %s아는구나 !!\n", pt.treename, usersinger);
+				System.out.printf("%s : 와 ! %s 아는구나 !!\n", pt.treename, usersinger);
 				mg2score = mg2score + 5;
 			} else {
 				System.out.printf("%s : 실망이야..\n", pt.treename);
@@ -157,7 +157,7 @@ public class MiniGame2 {
 		usersinger = Main.input.next();
 		System.out.println("└──────────────┘");
 		if (usersinger.equals(SingerList[1])) {
-			System.out.printf("%s : 와 ! %s아는구나 !!\n", pt.treename, usersinger);
+			System.out.printf("%s : 와 ! %s 아는구나 !!\n", pt.treename, usersinger);
 			mg2score = mg2score + 10;
 		} else {
 			System.out.printf("%s : ㅎㅎ헷갈렸구나? \n ", pt.treename);
@@ -248,7 +248,7 @@ public class MiniGame2 {
 			System.out.println("└──────────────┘");
 
 			if (usersinger.equals(SingerList[2])) {
-				System.out.printf("%s : 와 ! %s아는구나 !!\n", pt.treename, usersinger);
+				System.out.printf("%s : 와 ! %s 아는구나 !!\n", pt.treename, usersinger);
 				mg2score = mg2score + 5;
 			} else {
 				System.out.printf("%s : 실망이야..\n", pt.treename);
