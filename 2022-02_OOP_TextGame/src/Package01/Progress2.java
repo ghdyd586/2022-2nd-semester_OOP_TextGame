@@ -32,7 +32,7 @@ public class Progress2 extends Progress {
 		System.out.println("\n");
 		Main.pause.GetPause(1500);
 		System.out.println("┌──────────────┐");
-		System.out.printf("    %s :♪ ♪\n", p.treename);
+		System.out.printf("    %s : ♪ ♪\n", p.treename);
 		System.out.println("└──────────────┘");
 		Main.pause.GetPause(600);
 		System.out.println("\n..?");

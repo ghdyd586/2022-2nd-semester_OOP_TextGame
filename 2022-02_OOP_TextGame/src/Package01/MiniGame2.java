@@ -181,8 +181,7 @@ public class MiniGame2 {
 		}
 
 		System.out.println("┌──────────────────────┐");
-
-		System.out.println("   노래 : ");
+		System.out.print("   노래 : ");
 		usersong = Main.input.next();
 		System.out.println("└──────────────────────┘");
 
