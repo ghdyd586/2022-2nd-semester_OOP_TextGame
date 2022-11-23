@@ -44,7 +44,7 @@ public class GetTool extends Player {
 
 	public void printtool() {
 		if (this.tool1get == true) {
-			Main.pause.GetPause(500);
+			Main.pause.GetPause(400);
 			System.out.println("┌───────────────────────────────────────┐");
 			Main.pause.GetPause(500);
 			System.out.println(
@@ -55,7 +55,7 @@ public class GetTool extends Player {
 			System.out.println("└───────────────────────────────────────┘");
 		}
 		if (this.tool2get == true) {
-			Main.pause.GetPause(500);
+			Main.pause.GetPause(400);
 			System.out.println("┌───────────────────────────────────────┐");
 			Main.pause.GetPause(500);
 			System.out.println(" /▔▔▔▔▔▔▔▔▔/|\n/_____________/ |\n|     └─┘     | /\n|_____________|/");
@@ -65,7 +65,7 @@ public class GetTool extends Player {
 			System.out.println("└───────────────────────────────────────┘");
 		}
 		if (this.tool3get == true) {
-			Main.pause.GetPause(500);
+			Main.pause.GetPause(400);
 			System.out.println("┌───────────────────────────────────────┐");
 			Main.pause.GetPause(500);
 			System.out.println("  ⌒      _T____ . • . •  °\n / \\    // ￣\\￣  °  ° • .\n/ | \\  //\\   / \n￣凵￣ ￣  ￣￣");
