@@ -35,9 +35,10 @@ public class MiniGame2 {
 			System.out.println("      문제는 총 3문제가 주어진다.");
 			System.out.println();
 			System.out.println();
-			System.out.println("  게임을 시작하시려면 y를 입력해 주세요. ");
+			System.out.println("  게임을 시작하시려면 \"그래\"를 입력해 주세요. ");
 			System.out.println("└───────────────────────────────┘");
-			if ((Main.input.next()).charAt(0) == 'y') {
+			String input = Main.input.next();
+			if (input.equals("그래")) {
 				this.MG2Loading();
 				this.SetScore();
 				this.MG2Gameplay1();

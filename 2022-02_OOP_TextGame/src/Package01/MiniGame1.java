@@ -3,12 +3,13 @@ package Package01;
 public class MiniGame1 {
 	private double mg1score;
 	public int stagecnt;
+	public int wrongcnt;
 	public long starttime;
 	public long endtime;
 	public long elapsedtime;
 	public String useranswer;
 	StringBuffer answer = new StringBuffer();
-	GetToolandPlace g1 = new GetToolandPlace();
+	GetTool g1 = new GetTool();
 
 	String[] IdiomList = { "오매", "삼고", "과유", "사면", "유비", "고진", "낙화", "부화", "오비", "아전" };
 	String[] AnswerList = { "불망", "초려", "불급", "초가", "무환", "감래", "유수", "뇌동", "이락", "인수" };
@@ -37,10 +38,17 @@ public class MiniGame1 {
 			System.out.println("         사 자 성 어 맞 추 기 \n            게임 방법 ");
 			System.out.println("\n    사자성어 앞 두 글자가 주어진다.\n    플레이어는 뒤의 두 글자를 맞춰야 한다.");
 			System.out.println("    3초 안에 정답 시 점수 2배,\n    5초 안에 정답 시 점수 1.5배,    \n    10초가 넘어가면 0점이다.");
+			System.out.println("    두 번 이상 틀리면 5점씩 감점 후 \n   다음 문제로 넘어간다.");
 			System.out.println("    문제는 총 10문제 이며, \n    문제는 연속으로 주어진다.");
-			System.out.println(" 게임을 시작하시려면 y를 입력해 주세요. : ");
+			System.out.println();
+			System.out.println("      점 수 에 따 른 도 구 보 상");
+			System.out.println("     135점 ~ 100점 : 조경사 친구");
+			System.out.println("     100점 ~  70점 : 원예 공구 상자");
+			System.out.println("      70점 ~   0점 : 삽과 물뿌리개");
+			System.out.println("    게임을 시작하시려면 \"그래\"를 \n      입력해 주세요. : ");
 			System.out.println("└───────────────────────────────┘");
-			if ((Main.input.next()).charAt(0) == 'y') {
+			String input = Main.input.next();
+			if (input.equals("그래")) {
 				this.MG1Loading();
 				this.SetScore();
 				this.MG1Game1();
@@ -67,19 +75,23 @@ public class MiniGame1 {
 		Main.pause.GetPause(500);
 		for (int i = 0; i < this.IdiomList.length; i++) {
 			this.SetupGame();
+			this.wrongcnt = 0;
 			if (i == 6) {
 				while (true) {
 					System.out.println("┌────────────────────────┐");
 					System.out.println("         잘 하셨어요!");
 					System.out.println("   지금부터는 난이도가 높아집니다!");
 					System.out.println("         최대 3배까지\n       점수를 획득할 수 있어요~");
-					System.out.println("   계속 하시려면 y를 입력 후 엔터\n   를 눌러주세요~ : ");
+					System.out.println("   계속 하시려면 \"그래\"를 입력 후 \n   엔터를 눌러주세요~ : ");
 					System.out.println("└────────────────────────┘");
-					if ((Main.input.next()).charAt(0) == 'y') {
+					String input = Main.input.next();
+					if (input.equals("그래")) {
 						this.MG1Loading();
 						break;
 					} else {
-						System.out.println("다시 입력해 주세요.");
+						System.out.println("게임을 종료합니다.");
+						this.MG1Ending();
+						break;
 					}
 				}
 			}
@@ -88,6 +100,7 @@ public class MiniGame1 {
 			while (true) {
 				System.out.println("┌────────────────────────┐");
 				System.out.println("   현재점수 : " + this.mg1score + "점");
+				System.out.println("   틀린횟수 : " + this.wrongcnt + "회");
 				System.out.printf("          문제 %d.\n", this.stagecnt + 1);
 				System.out.println("          " + this.answer);
 				System.out.println("└────────────────────────┘");
@@ -128,7 +141,18 @@ public class MiniGame1 {
 					break;
 
 				} else {
-					System.out.println("틀렸습니다. 다시 시도하세요.");
+					if (this.wrongcnt >= 1)
+					{
+						System.out.println("다음 문제로 넘어갑니다.");
+						mg1score -= 5;
+						this.stagecnt++;
+						Main.pause.GetPause(500);
+						break;
+					}
+					else {						
+						System.out.println("틀렸습니다. 다시 시도하세요.");
+						this.wrongcnt++;
+					}
 				}
 			}
 
@@ -151,7 +175,7 @@ public class MiniGame1 {
 		}
 		g1.printtool();
 		System.out.println("미니게임 1 종료힙니다.");
-		Main.pause.GetPause(1000);
+		Main.pause.GetPause(2000);
 		Player.pr.TalkwithTree();
 	}
 }

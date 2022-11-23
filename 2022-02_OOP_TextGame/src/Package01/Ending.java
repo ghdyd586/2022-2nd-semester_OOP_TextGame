@@ -2,7 +2,11 @@ package Package01;
 
 public class Ending {
 
-	double FinalScore; // 총능력치 : 열매+꽃
+	int BranchCnt = Opening.p1.GetBranchCnt();
+	int FlowerCnt = Opening.p1.GetFlowerCnt();
+	int FruitCnt = Opening.p1.GetFruitCnt();
+	int FinalScore = FlowerCnt+FruitCnt; // 총능력치 : 열매+꽃
+
 	String tree;
 	PlaceandTreename p = new PlaceandTreename();
 
@@ -51,11 +55,11 @@ public class Ending {
 		System.out.println();
 		Main.pause.GetPause(500);
 
-		System.out.println(Progress.t.OrdinaryTree[9]);
-		Main.pause.GetPause(100);
 
 		if (FinalScore >= 10) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", Opening.p1.GetPlayerName(), p.GetTreename(), tree);
+			System.out.println(Progress.t.TreeforEnding[0]);
+			Main.pause.GetPause(100);
+			System.out.printf("%s(이)가 심었던 %s(은)는 %s(이)가 되었다!!\n", Opening.p1.GetPlayerName(), p.treename, tree);
 			Main.pause.GetPause(1000);
 
 			System.out.println();
@@ -77,7 +81,10 @@ public class Ending {
 		}
 
 		else if (FinalScore > 8 && FinalScore < 10) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다!!\n", Opening.p1.GetPlayerName(), p.treename, tree);
+			System.out.println(Progress.t.TreeforEnding[1]);
+			Main.pause.GetPause(100);
+
+			System.out.printf("%s(이)가 심었던 %s(은)는 %s(이)가 되었다!!\n", Opening.p1.GetPlayerName(), p.treename, tree);
 			Main.pause.GetPause(1000);
 
 			System.out.println();
@@ -99,7 +106,10 @@ public class Ending {
 		}
 
 		else if (FinalScore > 5 && FinalScore < 8) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다!\n", Opening.p1.GetPlayerName(), p.treename, tree);
+			System.out.println(Progress.t.TreeforEnding[1]);
+			Main.pause.GetPause(100);
+
+			System.out.printf("%s(이)가 심었던 %s(은)는 %s(이)가 되었다!\n", Opening.p1.GetPlayerName(), p.treename, tree);
 			Main.pause.GetPause(1000);
 
 			System.out.println();
@@ -121,7 +131,10 @@ public class Ending {
 		}
 
 		else if (FinalScore < 5) {
-			System.out.printf("%s가 심었던 %s는 %s가 되었다.....\n", Opening.p1.GetPlayerName(), p.treename, tree);
+			System.out.println(Progress.t.TreeforEnding[2]);
+			Main.pause.GetPause(100);
+
+			System.out.printf("%s(이)가 심었던 %s(은)는 %s(이)가 되었다.....\n", Opening.p1.GetPlayerName(), p.treename, tree);
 			Main.pause.GetPause(1000);
 
 			System.out.println();
@@ -155,7 +168,7 @@ public class Ending {
 		Main.pause.GetPause(700);
 		System.out.println("   엔딩,나무이름 짓기, 미니게임2, 장소정하기 : 현진우");
 		Main.pause.GetPause(700);
-		System.out.println("       미니게임 3, 실패 엔딩 , 스코어보드 : 최우정");
+		System.out.println("     미니게임 3, 실패 엔딩 , 스코어보드 : 최우정");
 		Main.pause.GetPause(700);
 		System.out.println("          감  사  합  니  다 !  !  ");
 		Main.pause.GetPause(700);

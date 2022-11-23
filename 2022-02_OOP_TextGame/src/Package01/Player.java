@@ -26,7 +26,20 @@ public class Player {
 	public int GetBranchCnt() {
 		return this.BranchCnt; // 나뭇가지 카운트 접근자
 	}
+	
+	public void SetFlowerCnt(int FlowerCnt) {
+		this.FlowerCnt = FlowerCnt; // 꽃 카운트 설정자
+	}
 
+	public void SetFruitCnt(int FruitCnt) {
+		this.FruitCnt = FruitCnt; // 열매 카운트 설정자
+	}
+
+	public void SetBranchCnt(int BranchCnt) {
+		this.BranchCnt = BranchCnt; // 나뭇가지 카운트 설정자
+	}
+
+	
 	public void ShowApplyForm() {
 		System.out.println("┌──────────────────────┐");
 		System.out.println("   KMU 나무키우기 경진대회   ");
@@ -54,13 +67,14 @@ public class Player {
 			System.out.println();
 			System.out.println("    참가자 이름 : " + this.GetPlayerName());
 			System.out.println("└──────────────────────┘");
-			System.out.print("     안내서를 받았다!\n   읽어볼까?(y/n) : ");
-			if ((Main.input.next()).charAt(0) == 'y') {
+			System.out.print("     안내서를 받았다!\n   읽어볼까?(응/아니) : ");
+			String input = Main.input.next();
+			if (input.equals("응")) {
 				System.out.println("게임 가이드로 이동합니다.");
 				this.GameGuide();
 				pr.Set();
 				break;
-			} else if ((Main.input.next()).charAt(0) == 'n') {
+			} else if (input.equals("아니")) {
 				System.out.println("게임을 시작합니다.");
 				pr.Set();
 				break;

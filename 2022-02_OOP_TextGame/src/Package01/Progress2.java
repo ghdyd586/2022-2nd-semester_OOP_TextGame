@@ -16,21 +16,61 @@ public class Progress2 extends Progress {
 		System.out.println("└────────────────────────┘");
 		while (true) {
 			int choose1 = Main.input.nextInt();
-			if (choose1 == 1) {
-				System.out.println("띠용");
+			if (choose1 == 1)
+			{
+				System.out.println("물을 주었더니 금방이라도 쑥쑥 자라날 것 같다!");
+				Main.pause.GetPause(1500);
+				if(MG1.g1.returntool1() == true)
+				{
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool1() + "보너스 적용! (-%)");
+				}
+				else if(MG1.g1.returntool2() == true) {
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool2() + "보너스 적용! (-%)");
+				}
+				else {
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool3() + "보너스 적용! (-%)");
+				}
 				break;
-			} else if (choose1 == 2) {
-				System.out.println("띠요오옹");
+			}
+			else if (choose1 == 2)
+			{
+				System.out.println("비료는 사춘기 나무에게 종합비타민 같은 존재이다!");
+				Main.pause.GetPause(1500);
+				if(MG1.g1.returntool1() == true)
+				{
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool1() + "보너스 적용! (-%)");
+				}
+				else if(MG1.g1.returntool2() == true) {
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool2() + "보너스 적용! (-%)");
+				}
+				else {
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool3() + "보너스 적용! (-%)");
+				}
 				break;
-			} else if (choose1 == 3) {
-				System.out.println("띠요요요옹");
+			}
+			else if (choose1 == 3)
+			{
+				System.out.println("사춘기 나무에게 뽀뽀하는 것은 치명적인 일이라구!");
+				Main.pause.GetPause(1500);
+				if(MG1.g1.returntool1() == true)
+				{
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool1() + "보너스 적용! (-%)");
+				}
+				else if(MG1.g1.returntool2() == true) {
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool2() + "보너스 적용! (-%)");
+				}
+				else {
+					System.out.println("--획득! 그리고 "+ MG1.g1.gettool3() + "보너스 적용! (-%)");
+				}
 				break;
-			} else {
+			}
+			else
+			{
 				System.out.println("잘못 입력했다. 해당 선택지의 숫자만 눌러야 한다. 다시 해보자.");
+
 			}
 		}
-		System.out.println("\n");
-		Main.pause.GetPause(1500);
+		Main.pause.GetPause(3000);
 		System.out.println("┌──────────────┐");
 		System.out.printf("    %s : ♪ ♪\n", p.treename);
 		System.out.println("└──────────────┘");
@@ -49,7 +89,7 @@ public class Progress2 extends Progress {
 		System.out.println("\n\n\n\n\n");
 		MG2.MG2Guide();
 		// 미니게임 2 클래스 삽입
-		Main.pause.GetPause(1500);
+		Main.pause.GetPause(2000);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 5단계");
 		System.out.println(t.OrdinaryTree[4]);
@@ -60,7 +100,7 @@ public class Progress2 extends Progress {
 		System.out.println("     남았다. 깔깔.");
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
-		Main.pause.GetPause(1500);
+		Main.pause.GetPause(2000);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 6단계");
 		System.out.println(t.OrdinaryTree[5]);
@@ -71,7 +111,7 @@ public class Progress2 extends Progress {
 		System.out.println("미니게임 3으로 이동합니다.");
 		// 미니게임 3 삽입
 		status += 10;
-		Main.pause.GetPause(1500);
+		Main.pause.GetPause(3000);
 		this.TalkwithTree();
 	}
 

@@ -13,7 +13,7 @@ public class Test {
 		// System.out.print("총능력치 : ");
 		// e.FinalScore = in.nextDouble();
 		// e.showFinal();
-		GetToolandPlace gtp = new GetToolandPlace();
+		GetTool gtp = new GetTool();
 		gtp.printtool();
 	}
 

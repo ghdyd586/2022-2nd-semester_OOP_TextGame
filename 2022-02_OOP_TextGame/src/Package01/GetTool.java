@@ -1,17 +1,27 @@
 package Package01;
 
-public class GetToolandPlace extends Player {
+public class GetTool extends Player {
 	private String tool1 = "조경사 친구";
 	private String tool2 = "원예 공구 상자";
 	private String tool3 = "삽과 물뿌리개";
 	private boolean tool1get = false;
 	private boolean tool2get = false;
 	private boolean tool3get = false;
-
+	
+	public boolean returntool1() {
+		return this.tool1get;
+	}
+	
+	public boolean returntool2() {
+		return this.tool2get;
+	}
+	public boolean returntool3() {
+		return this.tool3get;
+	}
 	public String gettool1() {
 		return this.tool1;
 	}
-
+	
 	public String gettool2() {
 		return this.tool2;
 	}
