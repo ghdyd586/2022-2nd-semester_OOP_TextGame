@@ -161,7 +161,7 @@ public class MiniGame2 {
 			System.out.printf("%s : 와 ! %s 아는구나 !!\n", pt.treename, usersinger);
 			mg2score = mg2score + 10;
 		} else {
-			System.out.printf("%s : 요즘 굉장히 핫한 아이돌이야~~~ \n ", pt.treename);
+			System.out.printf("%s : 요즘 굉장히 핫한 아이돌인데~~ \n ", pt.treename);
 			try {
 				this.play2_2();
 				Thread.sleep(4000);
@@ -187,7 +187,7 @@ public class MiniGame2 {
 		System.out.println("└──────────────────────┘");
 
 		if (usersong.equals(SongList[1])) {
-			System.out.printf("%s : 어텐셔어어어어언~~~★\n", pt.treename);
+			System.out.printf("%s : 어텐셔어어어어언~★\n", pt.treename);
 			mg2score = mg2score + 10;
 		} else {
 			System.out.printf("%s : 넌 내 관심을 끌었어 ~!@@  \n", pt.treename);
@@ -235,7 +235,7 @@ public class MiniGame2 {
 			System.out.printf("%s : 와 ! %s아는구나 !!\n", pt.treename, usersinger);
 			mg2score = mg2score + 10;
 		} else {
-			System.out.printf("%s : 원숭이들은 음악을 참 잘해 \n ", pt.treename);
+			System.out.printf("%s : ㅎㅎ헷갈렸구나? \n ", pt.treename);
 			try {
 				this.play3_2();
 				Thread.sleep(4000);
@@ -262,10 +262,10 @@ public class MiniGame2 {
 		System.out.println("└──────────────────────┘");
 
 		if (usersong.equals(SongList[2])) {
-			System.out.printf("%s : 그러다 ~ 밤이 찾아오면 ~~ \n", pt.treename);
+			System.out.printf("%s : 그러다 ~ 밤이 찾아오면 ~~♪ \n", pt.treename);
 			mg2score = mg2score + 10;
 		} else {
-			System.out.printf("%s : 연인들은 항상 그러더라구  \n", pt.treename);
+			System.out.printf("%s : ㅅ r 랑 한ㄷㅏ면 ...주 ㅈㅓ 하ㅈㅣ ㅁr세요 ....☆   \n", pt.treename);
 			try {
 				this.play3_2();
 				Thread.sleep(1000);
