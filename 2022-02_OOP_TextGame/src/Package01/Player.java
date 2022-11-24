@@ -1,12 +1,19 @@
 package Package01;
 
 public class Player {
-	private static String prplayername; // 플레이어 이름 선언
-	private static int FlowerCnt; // 꽃 카운트 변수 선언
-	private static int FruitCnt; // 열매 카운트 변수 선언
-	private static int BranchCnt; // 나뭇가지 카운트 변수 선언
+	private String prplayername; // 플레이어 이름 선언
+	private int FlowerCnt; // 꽃 카운트 변수 선언
+	private int FruitCnt; // 열매 카운트 변수 선언
+	private int BranchCnt; // 나뭇가지 카운트 변수 선언
+	private int FinalScore;
 	static Progress pr = new Progress();
 
+	public void SetFinalScore() {
+		this.FinalScore = this.FlowerCnt + this.FruitCnt;
+	}
+	public int GetFinalScore() {
+		return this.FinalScore;
+	}
 	public String GetPlayerName() {
 		return this.prplayername; // 플레이어 이름 접근자
 	}

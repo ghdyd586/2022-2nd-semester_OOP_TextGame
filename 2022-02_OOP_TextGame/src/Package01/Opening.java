@@ -2,7 +2,7 @@ package Package01;
 
 public class Opening {
 	static Player p1 = new Player();
-
+	
 	void opening() {
 		System.out.println("  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 		System.out.println("  @@@@@@@@@@             @@@@@@@@@@");
