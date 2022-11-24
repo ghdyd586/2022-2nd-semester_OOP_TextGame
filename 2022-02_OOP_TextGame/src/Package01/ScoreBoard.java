@@ -1,4 +1,4 @@
-package teampro;
+package Package01;
 
 public class ScoreBoard {
 	private int MG1Score;

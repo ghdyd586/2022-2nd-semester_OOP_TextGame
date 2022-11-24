@@ -161,7 +161,7 @@ public class MiniGame2 {
 			System.out.printf("%s : 와 ! %s 아는구나 !!\n", pt.treename, usersinger);
 			mg2score = mg2score + 10;
 		} else {
-			System.out.printf("%s : ㅎㅎ헷갈렸구나? \n ", pt.treename);
+			System.out.printf("%s : 요즘 굉장히 핫한 아이돌이야~~~ \n ", pt.treename);
 			try {
 				this.play2_2();
 				Thread.sleep(4000);
@@ -187,7 +187,7 @@ public class MiniGame2 {
 		System.out.println("└──────────────────────┘");
 
 		if (usersong.equals(SongList[1])) {
-			System.out.printf("%s : 어텐셔어어어어언~~~~\n", pt.treename);
+			System.out.printf("%s : 어텐셔어어어어언~~~★\n", pt.treename);
 			mg2score = mg2score + 10;
 		} else {
 			System.out.printf("%s : 넌 내 관심을 끌었어 ~!@@  \n", pt.treename);
