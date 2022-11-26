@@ -29,13 +29,22 @@ public class Progress3 extends Progress {
 				Main.pause.GetPause(1500);
 				if(MG1.g1.returntool1() == true)
 				{
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool1() + "보너스 적용! (-%)");
+					Opening.p1.SetBranchCnt(1);
+					Opening.p1.SetFlowerCnt(3);
+					Opening.p1.SetFruitCnt(2);
+					System.out.println("나뭇가지 1개 / 열매 1개 / 꽃 2개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개 / 꽃 1개)");
 				}
 				else if(MG1.g1.returntool2() == true) {
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool2() + "보너스 적용! (-%)");
+					Opening.p1.SetBranchCnt(1);
+					Opening.p1.SetFlowerCnt(2);
+					Opening.p1.SetFruitCnt(2);
+					System.out.println("나뭇가지 1개 / 열매 1개 / 꽃 2개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개)");
 				}
 				else {
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool3() + "보너스 적용! (-%)");
+					Opening.p1.SetBranchCnt(1);
+					Opening.p1.SetFlowerCnt(3);
+					Opening.p1.SetFruitCnt(1);
+					System.out.println("나뭇가지 1개 / 열매 1개 / 꽃 2개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 꽃 1개)");
 				}
 				break;
 			}
@@ -45,13 +54,19 @@ public class Progress3 extends Progress {
 				Main.pause.GetPause(1500);
 				if(MG1.g1.returntool1() == true)
 				{
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool1() + "보너스 적용! (-%)");
+					Opening.p1.SetFlowerCnt(2);
+					Opening.p1.SetFruitCnt(2);
+					System.out.println("열매 1개 / 꽃 1개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개 / 꽃 1개)");
 				}
 				else if(MG1.g1.returntool2() == true) {
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool2() + "보너스 적용! (-%)");
+					Opening.p1.SetFlowerCnt(1);
+					Opening.p1.SetFruitCnt(2);
+					System.out.println("열매 1개 / 꽃 1개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개)");
 				}
 				else {
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool3() + "보너스 적용! (-%)");
+					Opening.p1.SetFlowerCnt(2);
+					Opening.p1.SetFruitCnt(1);
+					System.out.println("열매 1개 / 꽃 1개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 꽃 1개)");
 				}
 				break;
 			}
@@ -61,13 +76,21 @@ public class Progress3 extends Progress {
 				Main.pause.GetPause(1500);
 				if(MG1.g1.returntool1() == true)
 				{
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool1() + "보너스 적용! (-%)");
+					Opening.p1.SetBranchCnt(-1);
+					Opening.p1.SetFlowerCnt(2);
+					Opening.p1.SetFruitCnt(1);
+					System.out.println("나뭇가지 1개 소멸! / 꽃 1개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개 / 꽃 1개)");
 				}
 				else if(MG1.g1.returntool2() == true) {
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool2() + "보너스 적용! (-%)");
+					Opening.p1.SetBranchCnt(-1);
+					Opening.p1.SetFlowerCnt(1);
+					Opening.p1.SetFruitCnt(1);
+					System.out.println("나뭇가지 1개 소멸! / 꽃 1개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개)");
 				}
 				else {
-					System.out.println("--획득! 그리고 "+ MG1.g1.gettool3() + "보너스 적용! (-%)");
+					Opening.p1.SetBranchCnt(-1);
+					Opening.p1.SetFlowerCnt(2);
+					System.out.println("나뭇가지 1개 소멸! / 꽃 1개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 꽃 1개)");
 				}
 				break;
 			}

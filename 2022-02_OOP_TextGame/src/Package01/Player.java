@@ -9,7 +9,7 @@ public class Player {
 	static Progress pr = new Progress();
 
 	public void SetFinalScore() {
-		this.FinalScore = this.FlowerCnt + this.FruitCnt;
+		this.FinalScore = this.FlowerCnt + (this.FruitCnt*2);
 	}
 	public int GetFinalScore() {
 		return this.FinalScore;
@@ -35,15 +35,15 @@ public class Player {
 	}
 	
 	public void SetFlowerCnt(int FlowerCnt) {
-		this.FlowerCnt = FlowerCnt; // 꽃 카운트 설정자
+		this.FlowerCnt += FlowerCnt; // 꽃 카운트 설정자
 	}
 
 	public void SetFruitCnt(int FruitCnt) {
-		this.FruitCnt = FruitCnt; // 열매 카운트 설정자
+		this.FruitCnt += FruitCnt; // 열매 카운트 설정자
 	}
 
 	public void SetBranchCnt(int BranchCnt) {
-		this.BranchCnt = BranchCnt; // 나뭇가지 카운트 설정자
+		this.BranchCnt += BranchCnt; // 나뭇가지 카운트 설정자
 	}
 
 	

@@ -53,7 +53,7 @@ public class Ending extends Player{
 		Main.pause.GetPause(500);
 
 
-		if (FinalScore >= 10) {
+		if (FinalScore >= 36) {
 			System.out.println(Progress.t.TreeforEnding[0]);
 			Main.pause.GetPause(100);
 			System.out.printf("%s(이)가 심었던 %s(은)는 %s(이)가 되었다!!\n", Opening.p1.GetPlayerName(), p.treename, tree);
@@ -77,7 +77,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore > 8 && FinalScore < 10) {
+		else if (FinalScore > 29 && FinalScore < 35) {
 			System.out.println(Progress.t.TreeforEnding[1]);
 			Main.pause.GetPause(100);
 
@@ -102,7 +102,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore > 5 && FinalScore < 8) {
+		else if (FinalScore > 22 && FinalScore < 28) {
 			System.out.println(Progress.t.TreeforEnding[1]);
 			Main.pause.GetPause(100);
 
@@ -127,7 +127,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore < 5) {
+		else if (FinalScore <= 14) {
 			System.out.println(Progress.t.TreeforEnding[2]);
 			Main.pause.GetPause(100);
 
