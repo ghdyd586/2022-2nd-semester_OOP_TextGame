@@ -41,7 +41,7 @@ public class Progress3 extends Progress {
 			}
 			else if (choose1 == 2)
 			{
-				System.out.println("비료는 사춘기 나무에게 종합비타민 같은 존재이다!\n근데 나무가 답답해 한다..");
+				System.out.println("비료는 나무에게 종합비타민 같은 존재이다!\n근데 나무가 답답해 한다..");
 				Main.pause.GetPause(1500);
 				if(MG1.g1.returntool1() == true)
 				{

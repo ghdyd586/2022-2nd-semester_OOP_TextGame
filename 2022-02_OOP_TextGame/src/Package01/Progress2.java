@@ -109,6 +109,7 @@ public class Progress2 extends Progress {
 		System.out.println("     냥이 : 해.줘.");
 		System.out.println("└────────────────────────┘");
 		System.out.println("미니게임 3으로 이동합니다.");
+		MG3.main(null);
 		// 미니게임 3 삽입
 		status += 10;
 		Main.pause.GetPause(3000);

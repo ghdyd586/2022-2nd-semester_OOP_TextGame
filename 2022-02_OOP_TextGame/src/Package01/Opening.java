@@ -41,9 +41,9 @@ public class Opening {
 	}
 
 	void title() {
-		System.out.println("┌┐    ┌┐   ┌────┐  ┌───┐┌┐   ◜───◝  ┌───┐┌┐");
+		System.out.println("┌┐    ┌┐   ┌────┐  ┌───┐┌┐   /───\\  ┌───┐┌┐");
 		System.out.println("││    │└┐  │ □  │  └──┐│││   │ ○ │  └──┐│││");
-		System.out.println("│└─┐  │┌┘  └────┘    ┌┘│││   ◟───◞     ││││");
+		System.out.println("│└─┐  │┌┘  └────┘    ┌┘│││   \\───/     ││││");
 		System.out.println("└──┘  └┘   ┌───┐     └┐│││   ┌───┐     ││││");
 		System.out.println("           └┐┌─┘      └┘└┘   └┐┌─┘     └┘└┘");
 		System.out.println("            └┘                └┘");
@@ -58,9 +58,9 @@ public class Opening {
 		System.out.println("                  |/         20211857 최우정  ");
 		System.out.println("               -------     └────────────────┘");
 		System.out.println("                                             ");
-		System.out.println(" >>>게임을 시작하시려면 start를 누르고 엔터를 눌러 주세요<<< ");
+		System.out.println(" >>>게임을 시작하시려면 \"시작\"을 입력하고 엔터를 눌러 주세요<<< ");
 		while (true) {
-			if (Main.input.next().equals("start")) {
+			if (Main.input.next().equals("시작")) {
 				this.p1.ShowApplyForm();
 				break;
 			} else {

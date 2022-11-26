@@ -8,6 +8,7 @@ public class Progress {
 	static TreeArray t = new TreeArray();
 	MiniGame1 MG1 = new MiniGame1();
 	MiniGame2 MG2 = new MiniGame2();
+	MiniGame3 MG3 = new MiniGame3();
 	static Progress2 pr2 = new Progress2();
 	static Progress3 pr3 = new Progress3();
 

@@ -1,11 +1,13 @@
 package Package01;
 
-public class Ending_Fail {
+public class Ending_Fail{
 
-	static void ShowFinal(//플레이어 객체 p) {
-		double FinalScore = p.getScore();
-		int branch = p.getBranch();
+	static void ShowFinal() {
+		//매개변수 : 플레이어 객체 p
 		
+		double FinalScore = Opening.p1.GetFinalScore();
+		int branch = Opening.p1.GetBranchCnt();
+		Ending e = new Ending();
 		if (FinalScore != 0 && branch != 0) {
 			return;
 		}
@@ -26,32 +28,32 @@ public class Ending_Fail {
 			System.out.println(" ");
 		}
 
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		System.out.println("@@@@@@@@@@             @@@@@@@@@@");
-		System.out.println("@@@@@@@@                 @@@@@@@@");
-		System.out.println("@@@@@@                     @@@@@@");
-		System.out.println("@@@@                         @@@@");
-		System.out.println("@@@                           @@@");
-		System.out.println("@@                             @@");
-		System.out.println("@@     @@@@@@@     @@@@@@@     @@");
-		System.out.println("@@        @           @        @@");
-		System.out.println("@@        @     @     @        @@");
-		System.out.println("@@        @           @        @@");
-		System.out.println("@@                             @@");
-		System.out.println("@@              @              @@");
-		System.out.println("@@             @ @             @@");
-		System.out.println("@@            @   @            @@");
-		System.out.println("@@           @@@@@@@           @@");
-		System.out.println("@@                             @@");
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		System.out.println("@│ / ┌─┐ ┌─┐ │ / │\\/│ ─── │\\  │ @");
-		System.out.println("@│<  │ │ │ │ │<  │  │  │  │ \\ │ @");
-		System.out.println("@│ \\ └─┘ └─┘ │ \\ │  │ ─── │  \\│ @");
-		System.out.println("@                               @");
-		System.out.println("@      >>대회에서 탈락했습니다<<      @");
-		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		System.out.println("  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		System.out.println("  @@@@@@@@@@             @@@@@@@@@@");
+		System.out.println("  @@@@@@@@                 @@@@@@@@");
+		System.out.println("  @@@@@@                     @@@@@@");
+		System.out.println("  @@@@                         @@@@");
+		System.out.println("  @@@                           @@@");
+		System.out.println("  @@                             @@");
+		System.out.println("  @@     @@@@@@@     @@@@@@@     @@");
+		System.out.println("  @@        @           @        @@");
+		System.out.println("  @@        @     @     @        @@");
+		System.out.println("  @@        @           @        @@");
+		System.out.println("  @@                             @@");
+		System.out.println("  @@              @              @@");
+		System.out.println("  @@             @ @             @@");
+		System.out.println("  @@            @   @            @@");
+		System.out.println("  @@           @@@@@@@           @@");
+		System.out.println("  @@                             @@");
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		System.out.println("@ _ __ ___  ___  _ __ __ __  _  _ _ @");
+		System.out.println("@| / /| . || . || / /|  \\  \\| || \\ |@");
+		System.out.println("@|  \\ | | || | ||  \\ |     || ||   |@");
+		System.out.println("@|_\\_\\`___'`___'|_\\_\\|_|_|_||_||_\\_|@");
+		System.out.println("@        >>대회에서 탈락했습니다<<        @");
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
-		endingCredit();
-
+		e.endingCredit();
+		
 	}
 }
