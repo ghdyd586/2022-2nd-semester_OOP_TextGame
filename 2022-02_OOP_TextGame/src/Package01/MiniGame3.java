@@ -17,8 +17,10 @@ public class MiniGame3 {
 			System.out.print(x);
 		}
 		System.out.println();
+		System.out.println();
 		System.out.println("기회가 " + life + "번 남았습니다.");
 		System.out.println();
+		MiniGame3.draw_man();
 
 	}
 
@@ -33,13 +35,13 @@ public class MiniGame3 {
 		if (ansCheck.equals(word)) {
 			System.out.println("벌레를 해치웠습니다!");
 			System.out.println();
-			System.out.println("나뭇가지 2개를 획득합니다.");
+//	System.out.println("나뭇가지 2개를 획득합니다.");
 			System.out.println(".");
 			System.out.println(".");
 			System.out.println(".");
 //			branch += 2;
 			return false;
-			
+
 		} else if (life == 0) {
 			System.out.println("벌레가 늘어났습니다ㅠㅠ");
 			System.out.println();
@@ -48,6 +50,7 @@ public class MiniGame3 {
 			System.out.println(".");
 			System.out.println(".");
 			return false;
+
 		}
 
 		else
@@ -59,8 +62,6 @@ public class MiniGame3 {
 		while (true) {
 			String word = "";
 			arr.clear();
-
-//			int life = 8;
 
 			System.out.println("마지막 미니게임을 시작합니다!");
 			System.out.println();
@@ -74,10 +75,16 @@ public class MiniGame3 {
 			System.out.println(".");
 			String two = scanner.nextLine();
 
-			if (two.equals("End")) {
+			if (two.equals("End") || life == 0)// CheckAns(ansCheck.equals.word)
+			{
 				System.out.println("게임이 종료됩니다.");
+				System.out.println(".");
+				System.out.println(".");
+				System.out.println(".");
 				break;
-			} else if (two.equals("Start")) {
+			}
+
+			else if (two.equals("Start")) {
 
 				int ind = random.nextInt(words.length);
 				word += words[ind];
@@ -89,14 +96,11 @@ public class MiniGame3 {
 				board(arr, life);
 
 				while (checkAns(arr, word, life)) {
-					if(checkAns(arr,word,life) == false)
-					{
-						break;
-					}
+					System.out.println();
 					System.out.println("알파벳 대문자 하나를 입력하세요.");
-
+					System.out.println();
 					String ans = scanner.nextLine();
-
+					System.out.println();
 					char letter = ans.charAt(0);
 
 					if (arr.contains(ans)) {
@@ -106,118 +110,117 @@ public class MiniGame3 {
 							if (word.charAt(i) == letter) {
 								arr.remove(i);
 								arr.add(i, ans);
+								System.out.println("맞췄습니다.");
+								System.out.println();
+								System.out.println("벌레가 없어지고 있어요!");
+								System.out.println();
+								System.out.println("_____________________________");
+								System.out.println();
 							}
 						}
 
 						if (!arr.contains(ans)) {
 							life -= 1;
+							System.out.println("틀렸습니다.");
+							System.out.println();
+							System.out.println("벌레가 늘어나고 있어요ㅜㅜ");
+							System.out.println();
+							System.out.println("_____________________________");
+							System.out.println();
+
 						}
 					}
 
 					board(arr, life);
 					System.out.println();
 				}
-			} else {
-				System.out.println("틀렸습니다.");
 				continue;
 			}
 		}
 	}
 
-
-
-private void draw_man() {
-	switch (MiniGame3.life) {
-	case 8:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println("  |       | ");
-		System.out.println("  |       | ");
-		System.out.println("  |       | ");
-		System.out.println("  |       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 7:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       | ");
-		System.out.println("  |       | ");
-		System.out.println("  |       | ");
-		System.out.println("  |       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 6:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println("  |       | ");
-		System.out.println("  |       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 5:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println("  |       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 4:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 3:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 2:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       | ");
-		System.out.println(" -|       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 1:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       | ");
-		System.out.println("   _______ ");
-		System.out.println(" _//     \\_ ");
-		break;
-	case 0:
-		System.out.println(" _\\_____//_ ");
-		System.out.println("  |  o o  | ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       |- ");
-		System.out.println(" -|       |- ");
-		System.out.println("   _______  ");
-		System.out.println(" _//     \\_ ");
-		break;
+	private static void draw_man() {
+		if (life == 8) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println("  |       | ");
+			System.out.println("  |       | ");
+			System.out.println("  |       | ");
+			System.out.println("  |       | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else if (life == 7) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| --    | ");
+			System.out.println("  |       | ");
+			System.out.println("  |       | ");
+			System.out.println("  |       | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else if (life == 6) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| -- -- | ");
+			System.out.println(" -|       | ");
+			System.out.println("  |       | ");
+			System.out.println("  |       | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else if (life == 5) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| -- -- | ");
+			System.out.println(" -| --    | ");
+			System.out.println(" -|       | ");
+			System.out.println("  |       | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else if (life == 4) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| -- -- | ");
+			System.out.println(" -| -- -- | ");
+			System.out.println(" -|       | ");
+			System.out.println(" -|       | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else if (life == 3) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- | ");
+			System.out.println(" -| --    | ");
+			System.out.println(" -|       | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else if (life == 2) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- | ");
+			System.out.println(" -|       | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else if (life == 1) {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| --    | ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
+		} else {
+			System.out.println(" _\\_______/_ ");
+			System.out.println("  |  o o  | ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println(" -| -- -- |- ");
+			System.out.println("   _______ ");
+			System.out.println(" _/       \\_ ");
 		}
 	}
 }
