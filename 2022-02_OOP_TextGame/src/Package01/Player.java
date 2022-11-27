@@ -4,7 +4,7 @@ public class Player {
 	private String prplayername; // 플레이어 이름 선언
 	private int FlowerCnt; // 꽃 카운트 변수 선언
 	private int FruitCnt; // 열매 카운트 변수 선언
-	private int BranchCnt; // 나뭇가지 카운트 변수 선언
+	private int BranchCnt=5; // 나뭇가지 카운트 변수 선언
 	private int FinalScore;
 	static Progress pr = new Progress();
 

@@ -58,7 +58,7 @@ public class GetTool extends Player {
 			Main.pause.GetPause(400);
 			System.out.println("┌───────────────────────────────────────┐");
 			Main.pause.GetPause(500);
-			System.out.println(" /▔▔▔▔▔▔▔▔▔/|\n/_____________/ |\n|     └─┘     | /\n|_____________|/");
+			System.out.println(" /▔▔▔▔▔▔▔▔▔▔▔/|\n/_____________/ |\n|     └─┘     | /\n|_____________|/");
 			Main.pause.GetPause(500);
 			System.out.println("이것만 있으면 나도 전문가! " + this.tool2 + "를 획득했다!");
 			Main.pause.GetPause(500);

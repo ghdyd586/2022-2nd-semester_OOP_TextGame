@@ -39,6 +39,7 @@ public class MiniGame3 {
 			System.out.println(".");
 //			branch += 2;
 			return false;
+			
 		} else if (life == 0) {
 			System.out.println("벌레가 늘어났습니다ㅠㅠ");
 			System.out.println();
@@ -88,6 +89,10 @@ public class MiniGame3 {
 				board(arr, life);
 
 				while (checkAns(arr, word, life)) {
+					if(checkAns(arr,word,life) == false)
+					{
+						break;
+					}
 					System.out.println("알파벳 대문자 하나를 입력하세요.");
 
 					String ans = scanner.nextLine();
