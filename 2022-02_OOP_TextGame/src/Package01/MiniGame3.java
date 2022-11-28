@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MiniGame3 {
-
 	public static String[] words = { "LADYBUG", "MOSQUITO", "MANTIS", "BUTTERFLY", "BUMBLEBEE" };
 	public static Random random = new Random();
 	public static Scanner scanner = new Scanner(System.in);
@@ -59,8 +58,9 @@ public class MiniGame3 {
 	}
 
 	public static void main(String[] args) {
-		while (true) {
-			String word = "";
+		String word = "";
+		boolean go = true;
+		while (go) {
 			arr.clear();
 
 			System.out.println("마지막 미니게임을 시작합니다!");
@@ -75,8 +75,9 @@ public class MiniGame3 {
 			System.out.println(".");
 			String two = scanner.nextLine();
 
-			if (two.equals("End") || life == 0)// CheckAns(ansCheck.equals.word)
-			{
+			String ansCheck = "";
+
+			if (two.equals("End")) {
 				System.out.println("게임이 종료됩니다.");
 				System.out.println(".");
 				System.out.println(".");
@@ -95,7 +96,7 @@ public class MiniGame3 {
 
 				board(arr, life);
 
-				while (checkAns(arr, word, life)) {
+				while (go) {
 					System.out.println();
 					System.out.println("알파벳 대문자 하나를 입력하세요.");
 					System.out.println();
@@ -129,12 +130,13 @@ public class MiniGame3 {
 							System.out.println();
 
 						}
-					}
 
-					board(arr, life);
-					System.out.println();
+						board(arr, life);
+						System.out.println();
+					}
+					go = checkAns(arr, word, life);
 				}
-				continue;
+
 			}
 		}
 	}
