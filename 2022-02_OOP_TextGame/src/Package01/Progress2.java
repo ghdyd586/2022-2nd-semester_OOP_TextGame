@@ -133,8 +133,8 @@ public class Progress2 extends Progress {
 		System.out.printf("   %s : 오늘의 리빙포인트\n", p.treename);
 		System.out.println("    이 코드를 짜고 있는");
 		System.out.println("    11월 21일을 기준으로 ");
-		System.out.println("    종강 : 23일\n    크리스마스 : 34일\n     2023년 새해 : 41일");
-		System.out.println("     남았다. 깔깔.");
+		System.out.println("    종강 : 23일\n    크리스마스 : 34일\n    2023년 새해 : 41일");
+		System.out.println("    남았다. 깔깔.");
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
 		Main.pause.GetPause(2000); // 2초 일시정지

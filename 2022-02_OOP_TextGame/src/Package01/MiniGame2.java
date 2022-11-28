@@ -7,7 +7,8 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
-
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 public class MiniGame2 {
 	private double mg2score;
 	public String usersinger;
@@ -348,9 +349,8 @@ public class MiniGame2 {
 		AudioInputStream stream;
 		AudioFormat format;
 		DataLine.Info info;
-
-		bgm = new File("C:\\treesongs\\iu1.wav");
-
+		
+		bgm = new File("treesongs/iu1.wav");
 		Clip clip;
 
 		try {
@@ -373,7 +373,7 @@ public class MiniGame2 {
 		AudioFormat format;
 		DataLine.Info info;
 
-		bgm = new File("C:\\treesongs\\iu2.wav");
+		bgm = new File("treesongs/iu2.wav");
 		Clip clip;
 
 		try {
@@ -396,7 +396,7 @@ public class MiniGame2 {
 		AudioFormat format;
 		DataLine.Info info;
 
-		bgm = new File("C:\\treesongs\\newjeans1.wav");
+		bgm = new File("treesongs/newjeans1.wav");
 		Clip clip;
 
 		try {
@@ -419,7 +419,7 @@ public class MiniGame2 {
 		AudioFormat format;
 		DataLine.Info info;
 
-		bgm = new File("C:\\treesongs\\newjeans2.wav");
+		bgm = new File("treesongs/newjeans2.wav");
 		Clip clip;
 
 		try {
@@ -442,7 +442,7 @@ public class MiniGame2 {
 		AudioFormat format;
 		DataLine.Info info;
 
-		bgm = new File("C:\\treesongs\\jannabi1.wav");
+		bgm = new File("treesongs/jannabi1.wav");
 
 		Clip clip;
 
@@ -466,7 +466,7 @@ public class MiniGame2 {
 		AudioFormat format;
 		DataLine.Info info;
 
-		bgm = new File("C:\\treesongs\\jannabi2.wav");
+		bgm = new File("treesongs/jannabi2.wav");
 
 		Clip clip;
 

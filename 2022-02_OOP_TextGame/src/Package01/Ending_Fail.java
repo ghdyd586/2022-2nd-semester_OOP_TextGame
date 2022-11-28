@@ -42,7 +42,7 @@ public class Ending_Fail {
 		System.out.println("@| / /| . || . || / /|  \\  \\| || \\ |@");
 		System.out.println("@|  \\ | | || | ||  \\ |     || ||   |@");
 		System.out.println("@|_\\_\\`___'`___'|_\\_\\|_|_|_||_||_\\_|@");
-		System.out.println("@        >>대회에서 탈락했습니다<<        @");
+		System.out.println("@        >>대회에서 탈락했습니다<<         @");
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
 		
