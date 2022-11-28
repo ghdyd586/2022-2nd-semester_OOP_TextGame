@@ -61,6 +61,8 @@ public class Progress{
 			System.out.println("┌────────────────────────┐");
 			System.out.printf("    %s : 거기가 아닐텐데..?\n", p.treename);
 			System.out.println("└────────────────────────┘");
+			Opening.p1.SetBranchCnt(-1); // 생명 증감
+			System.out.println("나뭇가지 1개 소멸!");
 		}
 		System.out.println("다음 단계로 넘어갑니다.");
 		Main.pause.GetPause(2000); // 2초 일시정지
@@ -103,6 +105,8 @@ public class Progress{
 			System.out.println("┌────────────────────────┐");
 			System.out.printf("    %s : 그게 아닐텐데..?\n", p.treename);
 			System.out.println("└────────────────────────┘");
+			Opening.p1.SetBranchCnt(-1); // 생명 증감
+			System.out.println("나뭇가지 1개 소멸!");
 		}
 		System.out.println("다음 단계로 넘어갑니다.");
 		status += 10; // 진행도 증가

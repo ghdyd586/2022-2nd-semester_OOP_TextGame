@@ -168,7 +168,7 @@ public class MiniGame2 {
 			System.out.printf("%s : 요즘 굉장히 핫한 아이돌인데~~ \n ", pt.treename);
 			try {
 				this.play2_2();
-				Thread.sleep(4000);
+				Thread.sleep(500);
 			} catch (Exception e) {
 
 			}
@@ -242,7 +242,7 @@ public class MiniGame2 {
 			System.out.printf("%s : ㅎㅎ헷갈렸구나? \n ", pt.treename);
 			try {
 				this.play3_2();
-				Thread.sleep(4000);
+				Thread.sleep(1000);
 			} catch (Exception e) {
 
 			}
@@ -336,7 +336,7 @@ public class MiniGame2 {
 		else if (mg2score <15) {
 			Opening.p1.SetBranchCnt(-1);
 			Opening.p1.SetFlowerCnt(1);
-			System.out.println("나무가지 1개 차감! / 꽃 1개 획득!");
+			System.out.println("나뭇가지 1개 소멸! / 꽃 1개 획득!");
 		}
 		System.out.println("미니게임2를 종료합니다.");
 	}

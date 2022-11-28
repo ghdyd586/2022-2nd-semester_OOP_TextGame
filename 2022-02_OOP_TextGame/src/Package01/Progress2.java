@@ -92,6 +92,14 @@ public class Progress2 extends Progress {
 			{
 				System.out.println("잘못 입력했다. 해당 선택지의 숫자만 눌러야 한다. 다시 해보자.");
 			}
+			
+
+		}
+		
+		if (Opening.p1.GetBranchCnt()==0) {
+			Ending_Fail ef = new Ending_Fail();
+			ef.ShowFailFinal();
+			System.exit(0);
 		}
 		Main.pause.GetPause(3000);
 		System.out.println("┌──────────────┐");
@@ -110,6 +118,12 @@ public class Progress2 extends Progress {
 		Main.pause.GetPause(1500);
 		System.out.println("\n\n\n\n\n");
 		MG2.MG2Guide(); // 미니게임 2 클래스 삽입
+		
+		if (Opening.p1.GetBranchCnt()==0) {
+			Ending_Fail ef = new Ending_Fail();
+			ef.ShowFailFinal();
+			System.exit(0);
+		}
 		
 		Main.pause.GetPause(2000);
 		System.out.println("┌────────────────────────┐");

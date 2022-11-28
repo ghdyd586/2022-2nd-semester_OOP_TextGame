@@ -99,6 +99,12 @@ public class Progress3 extends Progress {
 			{
 				System.out.println("잘못 입력했다. 해당 선택지의 숫자만 눌러야 한다. 다시 해보자.");
 			}
+
+		}
+		if (Opening.p1.GetBranchCnt()==0) {
+			Ending_Fail ef = new Ending_Fail();
+			ef.ShowFailFinal();
+			System.exit(0);
 		}
 		System.out.println("다음 단계로 넘어갑니다.");
 		Main.pause.GetPause(2000); // 2초 일시정지

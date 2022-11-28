@@ -153,11 +153,7 @@ public class Ending extends Player{
 			System.out.println("                        ★★☆☆☆");
 			System.out.println("└───────────────────────────────┘");
 		}
-		else if (FinalScore == 0)
-		{
-			Ending_Fail ef = new Ending_Fail(FinalScore);
-			ef.ShowFailFinal();
-		}
+
 		this.endingCredit();
 
 	}
