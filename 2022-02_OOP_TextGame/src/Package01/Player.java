@@ -5,17 +5,9 @@ public class Player {
 	private int FlowerCnt; // 꽃 카운트 변수 선언
 	private int FruitCnt; // 열매 카운트 변수 선언
 	private int BranchCnt=5; // 나뭇가지 카운트 변수 선언
-	private int FinalScore;
+	
 	static Progress pr = new Progress();
 
-	public void SetFinalScore() {
-		this.FinalScore = this.FlowerCnt + (this.FruitCnt*2);
-		 //최종스코어 설정자(꽃 = 1점, 열매 = 2점으로 계산) 
-	}
-	public int GetFinalScore() {
-		return this.FinalScore;
-		// 최종스코어 접근자
-	}
 	public String GetPlayerName() {
 		return this.prplayername; // 플레이어 이름 접근자
 	}

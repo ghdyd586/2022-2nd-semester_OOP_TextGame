@@ -6,7 +6,7 @@ public class Progress3 extends Progress {
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 7단계");
 		System.out.println(t.OrdinaryTree[6]);
-		System.out.printf(" %s : 날씨가 점점 추워지고 있으니\n 몸 조심해!",p.treename);
+		System.out.printf(" %s : 날씨가 점점 추워지고 있으니\n 몸 조심해!\n",p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
 		Main.pause.GetPause(2000);
@@ -108,6 +108,7 @@ public class Progress3 extends Progress {
 		System.out.printf(" %s : 얼마 안남았어! 좀만 힘내! \n", p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
+		Main.pause.GetPause(2000);
 		System.out.println("9단계 까지 오는 동안 약 1년이 지났다.");
 		Main.pause.GetPause(800); // 0.8초 일시정지
 		System.out.println(p.treename + "은(는) 아직 꼬마 나무지만");
@@ -126,6 +127,8 @@ public class Progress3 extends Progress {
 		System.out.println(Opening.p1.GetPlayerName() +" : 이제 학교에 제출해야 겠다.");
 		System.out.println("└────────────────────────┘");
 		Main.pause.GetPause(1500); // 1.5초 일시정지
+		Ending e = new Ending(MakeScore()); // 엔딩 객체 생성
+		
 		while (true) {
 			System.out.println("나무가 다 자랐습니다.\n엔딩을 보러가시겠습니까?(응/아니)");
 			String input = Main.input.next();
@@ -136,5 +139,10 @@ public class Progress3 extends Progress {
 				System.out.println("엔딩은 꼭 보셔야 합니다. 다시 입력해 주세요");
 			} // 엔딩은 무조건 봐야 게임이 진행되게끔 설정
 		}
+	}
+	public int MakeScore() {
+		int a = Opening.p1.GetFlowerCnt();
+		int b = Opening.p1.GetFruitCnt();
+		return a+(b*2);
 	}
 }

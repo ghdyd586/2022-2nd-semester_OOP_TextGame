@@ -1,17 +1,16 @@
 package Package01;
 
-public class Progress {
+public class Progress{
 	static int status = 10; // 진행 상황 카운트
 	Tree TREE = new Tree(); // 나무 출력 객체 생성
-	Ending e = new Ending(); // 엔딩 객체 생성
 	PlaceandTreename p = new PlaceandTreename(); // 나무 이름과 장소 선정 객체 생성
 	static TreeArray t = new TreeArray(); // 단계별 나무 출력 객체 생성
 	MiniGame1 MG1 = new MiniGame1(); // 미니게임1 객체 생성
 	MiniGame2 MG2 = new MiniGame2(); // 미니게임2 객체 생성
 	MiniGame3 MG3 = new MiniGame3(); // 미니게임3 객체 생성
 	static Progress2 pr2 = new Progress2(); // 중반부 진행 객체 생성
-	static Progress3 pr3 = new Progress3(); // 후반부 진행 객체 생성	
-	
+	static Progress3 pr3 = new Progress3(); // 후반부 진행 객체 생성
+
 	public void Set() {
 		p.getTreename(); // 나무 이름 입력 메소드 호출
 		System.out.println("장소 설정을 하겠습니다.");
@@ -84,8 +83,11 @@ public class Progress {
 			if(MG1.g1.returntool1() == true)
 			{
 				Opening.p1.SetBranchCnt(1); // 생명 증감
+				System.out.println(Opening.p1.GetBranchCnt());
 				Opening.p1.SetFlowerCnt(3); // 꽃 증감
+				System.out.println(Opening.p1.GetFlowerCnt());
 				Opening.p1.SetFruitCnt(2); // 열매 증감
+				System.out.println(Opening.p1.GetFruitCnt());
 				System.out.println("나뭇가지 1개 / 열매 1개 / 꽃 2개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개 / 꽃 1개)");
 			}
 			else if(MG1.g1.returntool2() == true) {
@@ -107,6 +109,5 @@ public class Progress {
 		Main.pause.GetPause(2000);
 		this.TalkwithTree(); // 진행도에 따라 중반부 진행상황으로 이동
 	}
-	
 
 }

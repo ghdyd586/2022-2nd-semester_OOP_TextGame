@@ -1,13 +1,15 @@
 package Package01;
 
-public class Ending_Fail{
-
-	static void ShowFinal() {
+public class Ending_Fail {
+	static int FinalScore;
+	Ending_Fail(int score){
+		FinalScore =  score;
+	}
+	static void ShowFailFinal() {
 		//매개변수 : 플레이어 객체 p
 		
-		double FinalScore = Opening.p1.GetFinalScore();
 		int branch = Opening.p1.GetBranchCnt();
-		Ending e = new Ending();
+//		Ending e = new Ending();
 		if (FinalScore != 0 && branch != 0) {
 			return;
 		}
@@ -53,7 +55,6 @@ public class Ending_Fail{
 		System.out.println("@        >>대회에서 탈락했습니다<<        @");
 		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
-		e.endingCredit();
 		
 	}
 }
