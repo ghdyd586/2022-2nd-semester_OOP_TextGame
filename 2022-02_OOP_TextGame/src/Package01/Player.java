@@ -10,9 +10,11 @@ public class Player {
 
 	public void SetFinalScore() {
 		this.FinalScore = this.FlowerCnt + (this.FruitCnt*2);
+		// 최종스코어 설정자(꽃 = 1점, 열매 = 2점으로 계산) 
 	}
 	public int GetFinalScore() {
 		return this.FinalScore;
+		// 최종스코어 접근자
 	}
 	public String GetPlayerName() {
 		return this.prplayername; // 플레이어 이름 접근자
@@ -37,16 +39,12 @@ public class Player {
 	public void SetFlowerCnt(int FlowerCnt) {
 		this.FlowerCnt += FlowerCnt; // 꽃 카운트 설정자
 	}
-
 	public void SetFruitCnt(int FruitCnt) {
 		this.FruitCnt += FruitCnt; // 열매 카운트 설정자
 	}
-
 	public void SetBranchCnt(int BranchCnt) {
 		this.BranchCnt += BranchCnt; // 나뭇가지 카운트 설정자
 	}
-
-	
 	public void ShowApplyForm() {
 		System.out.println("┌──────────────────────┐");
 		System.out.println("   KMU 나무키우기 경진대회   ");
@@ -57,12 +55,13 @@ public class Player {
 		System.out.print("     참가 신청서를 받았다!\n   이름을 적어보자(5자 이하) : ");
 		String inputplayername = Main.input.next(); // 플레이어명 입력받기
 		if (inputplayername.length() > 5) {
+			// 플레이어 이름 5글자 보다 길 경우 다시 입력하는 문구 출력.
 			System.out.println("┌──────────────────────┐");
 			System.out.println("   이름이 너무 깁니다\n   다시 입력해 주세요.");
 			System.out.println("└──────────────────────┘");
-			this.ShowApplyForm();
+			this.ShowApplyForm(); // 메소드 다시 호출
 		} else {
-			this.SetPlayerName(inputplayername);
+			this.SetPlayerName(inputplayername); // 설정자 호출
 			System.out.println("┌──────────────────────┐");
 			System.out.printf("     %s님, 참가 신청\n     완료되었습니다.\n", this.GetPlayerName());
 			System.out.println("└──────────────────────┘");
@@ -75,26 +74,24 @@ public class Player {
 			System.out.println("    참가자 이름 : " + this.GetPlayerName());
 			System.out.println("└──────────────────────┘");
 			System.out.print("     안내서를 받았다!\n   읽어볼까?(응/아니) : ");
-			String input = Main.input.next();
+			String input = Main.input.next(); // 안내문 읽을지 여부 결정
 			if (input.equals("응")) {
 				System.out.println("게임 가이드로 이동합니다.");
-				this.GameGuide();
-				pr.Set();
-				break;
+				this.GameGuide(); // 게임 가이드 메소드 호출
+				pr.Set(); // 게임 진행 화면 이동
+				break; // while문 탈출
 			} else if (input.equals("아니")) {
 				System.out.println("게임을 시작합니다.");
-				pr.Set();
-				break;
+				pr.Set(); // 게임 진행 화면 이동
+				break; // while문 탈출
 			} else {
 				System.out.println("다시 입력해 주세요.");
 			}
 		}
-
 	}
-
 	public void GameGuide() {
 		Tree TREE = new Tree();
-		Main.pause.GetPause(700);
+		Main.pause.GetPause(700); // 0.7초 일시정지 후 출력
 		System.out.println("┌──────────────────────────────────────────────────────────────────────────┐");
 		System.out.println("                           게 임 스 토 리 및 게 임 방 법");
 		System.out.println();
@@ -111,7 +108,6 @@ public class Player {
 		System.out.println("   질문은 3~4개의 선택지가 주어지는데, 선택지에 따라 아이템 및 라이프 증감이 일어나니 잘 선택해 보자.");
 		System.out.println("└──────────────────────────────────────────────────────────────────────────┘");
 		System.out.println("다 읽으셨나요? 5초 뒤에 자동으로 본 게임이 시작됩니다!");
-		Main.pause.GetPause(5000);
+		Main.pause.GetPause(5000); // 5초 일시 정지
 	}
-
 }

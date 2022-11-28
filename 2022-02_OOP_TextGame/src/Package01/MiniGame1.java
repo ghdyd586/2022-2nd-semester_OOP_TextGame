@@ -1,36 +1,30 @@
 package Package01;
 
 public class MiniGame1 {
-	private double mg1score;
-	public int stagecnt;
-	public int wrongcnt;
-	public long starttime;
-	public long endtime;
-	public long elapsedtime;
-	public String useranswer;
-	StringBuffer answer = new StringBuffer();
-	GetTool g1 = new GetTool();
-
+	private double mg1score; // 미니게임 1 점수
+	public int stagecnt; // 미니게임 1 단계 카운트
+	public int wrongcnt; // 미니게임 1 오답 카운트
+	public long starttime; // 시작 시간 저장
+	public long endtime; // 종료 시간 저장
+	public long elapsedtime; // 문제 풀이 소요시간
+	public String useranswer; // 사용자가 입력한 정답 저장
+	StringBuffer answer = new StringBuffer(); // Stringbuffer 객체
+	GetTool g1 = new GetTool(); // GetTool 객체 생성
 	String[] IdiomList = { "오매", "삼고", "과유", "사면", "유비", "고진", "낙화", "부화", "오비", "아전" };
 	String[] AnswerList = { "불망", "초려", "불급", "초가", "무환", "감래", "유수", "뇌동", "이락", "인수" };
-
 	public double GetScore() {
 		return this.mg1score;
-	}
-
+	}// 미니게임 1 점수 접근자
 	public void SetScore() {
 		this.mg1score = 0;
-	}
-
+	}// 미니게임 1 점수 설정자
 	public void SetupGame() {
 		this.answer = new StringBuffer();
 		this.starttime = 0;
 		this.endtime = 0;
 		this.answer.append(IdiomList[stagecnt]);
 		this.answer.append("--");
-
-	}
-
+	}// 각종 필드 초기화 메소드 및 문제 초기화
 	public void MG1Guide() {
 		while (true) {
 			System.out.println("┌───────────────────────────────┐");
@@ -49,33 +43,30 @@ public class MiniGame1 {
 			System.out.println("└───────────────────────────────┘");
 			String input = Main.input.next();
 			if (input.equals("그래")) {
-				this.MG1Loading();
-				this.SetScore();
-				this.MG1Game1();
-				break;
+				this.MG1Loading(); // 로딩화면 연결
+				this.SetScore(); // 점수 초기화 메소드 호출
+				this.MG1Game1(); // 게임화면 호출
+				break; 
 			} else {
 				System.out.println("다시 입력해 주세요.");
 			}
 		}
 	}
-
 	public void MG1Loading() {
 		System.out.println("3초 후에 시작합니다.");
-		Main.pause.GetPause(1000);
+		Main.pause.GetPause(1000); // 1초 일시정지
 		System.out.println("게임 화면 이동중.");
-		Main.pause.GetPause(1000);
+		Main.pause.GetPause(1000); // 1초 일시정지
 		System.out.println("게임 화면 이동중...");
-		Main.pause.GetPause(1000);
+		Main.pause.GetPause(1000); // 1초 일시정지
 		System.out.println("게임 화면 이동중.....");
-
 	}
-
 	public void MG1Game1() {
 		System.out.println("게임 시작!");
-		Main.pause.GetPause(500);
+		Main.pause.GetPause(500); // 0.5초 일시정지
 		for (int i = 0; i < this.IdiomList.length; i++) {
-			this.SetupGame();
-			this.wrongcnt = 0;
+			this.SetupGame(); // 문제 초기화 및 생성
+			this.wrongcnt = 0; // 오답횟수 초기화
 			if (i == 6) {
 				while (true) {
 					System.out.println("┌────────────────────────┐");
@@ -86,29 +77,29 @@ public class MiniGame1 {
 					System.out.println("└────────────────────────┘");
 					String input = Main.input.next();
 					if (input.equals("그래")) {
-						this.MG1Loading();
+						this.MG1Loading(); // 로딩화면 연결
 						break;
 					} else {
 						System.out.println("게임을 종료합니다.");
-						this.MG1Ending();
+						this.MG1Ending(); // 바로 게임 종료
 						break;
 					}
 				}
 			}
-			System.out.println("타이머 시작");
-			this.starttime = System.currentTimeMillis();
+			System.out.println("타이머 시작"); 
+			this.starttime = System.currentTimeMillis(); // 타이머 호출
 			while (true) {
 				System.out.println("┌────────────────────────┐");
 				System.out.println("   현재점수 : " + this.mg1score + "점");
 				System.out.println("   틀린횟수 : " + this.wrongcnt + "회");
 				System.out.printf("          문제 %d.\n", this.stagecnt + 1);
 				System.out.println("          " + this.answer);
-				System.out.println("└────────────────────────┘");
+				System.out.println("└────────────────────────┘"); // 문제 화면
 				System.out.print("정답 입력 :");
 				this.useranswer = Main.input.next();
-				this.endtime = System.currentTimeMillis();
 				if (this.useranswer.equals(AnswerList[stagecnt])) {
-					this.elapsedtime = (endtime - starttime) / 1000;
+					this.endtime = System.currentTimeMillis(); // 타이머 호출
+					this.elapsedtime = (endtime - starttime) / 1000; // 소요시간 계산
 					if (i <= 6) {
 						if (this.elapsedtime < 4) {
 							mg1score += 15;
@@ -118,7 +109,7 @@ public class MiniGame1 {
 							mg1score += 0;
 						} else {
 							mg1score += 7;
-						}
+						}// 소요시간에 따른 점수 차등 (1~5번 문제)
 					} else {
 						if (this.elapsedtime < 4) {
 							mg1score += 10;
@@ -128,7 +119,7 @@ public class MiniGame1 {
 							mg1score += 0;
 						} else {
 							mg1score += 5;
-						}
+						}// 소요시간에 따른 점수 차등 (6~10번 문제)
 					}
 					System.out.println("┌────────────────────────┐");
 					System.out.println("          정 답            ");
@@ -136,46 +127,42 @@ public class MiniGame1 {
 					System.out.println("       소요시간 : " + this.elapsedtime + "초");
 					System.out.println("     현재점수 : " + this.mg1score + "점");
 					System.out.println("└────────────────────────┘\n");
-					this.stagecnt++;
-					Main.pause.GetPause(500);
+					this.stagecnt++; // 정답 시 단계 카운트 ++
+					Main.pause.GetPause(500); // 0.5초 일시정지
 					break;
-
 				} else {
-					if (this.wrongcnt >= 1)
+					if (this.wrongcnt >= 1) // 오답 2회 시
 					{
 						System.out.println("다음 문제로 넘어갑니다.");
-						mg1score -= 5;
-						this.stagecnt++;
+						mg1score -= 5; // 5점 감점
+						this.stagecnt++; // 단계 카운트 ++
 						Main.pause.GetPause(500);
 						break;
 					}
 					else {						
 						System.out.println("틀렸습니다. 다시 시도하세요.");
-						this.wrongcnt++;
+						this.wrongcnt++; // 오답 카운트 ++
 					}
 				}
 			}
-
 		}
-		this.MG1Ending();
-
+		this.MG1Ending(); // 모든 문제 수행 후 결과창 호출
 	}
-
 	public void MG1Ending() {
 		System.out.println("┌────────────────────────┐");
 		System.out.println("     미 니 게 임 1 결 과");
 		System.out.println("     획 득 점 수 : " + this.mg1score);
 		System.out.println("└────────────────────────┘");
 		if (this.mg1score >= 100) {
-			g1.findtool1();
+			g1.findtool1(); // 100점 이상 시 조경사 도구 획득 
 		} else if (this.mg1score >= 70) {
-			g1.findtool2();
+			g1.findtool2(); // 70점 이상 시 도구 세트 획득
 		} else {
-			g1.findtool3();
+			g1.findtool3(); // 70점 미만 시 삽과 물뿌리개 획득
 		}
-		g1.printtool();
+		g1.printtool(); // 도구 획득 문구 출력
 		System.out.println("미니게임 1 종료힙니다.");
-		Main.pause.GetPause(2000);
-		Player.pr.TalkwithTree();
+		Main.pause.GetPause(2000); // 2초 일시정지
+		Player.pr.TalkwithTree(); // 나무와의 대화 메소드 호출
 	}
 }
