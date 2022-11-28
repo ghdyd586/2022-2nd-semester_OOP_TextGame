@@ -1,31 +1,21 @@
 package Package01;
 
 public class Ending_Fail {
-	static int FinalScore;
-	Ending_Fail(int score){
-		FinalScore =  score;
-	}
+	
 	static void ShowFailFinal() {
 		//매개변수 : 플레이어 객체 p
 		
 		int branch = Opening.p1.GetBranchCnt();
 //		Ending e = new Ending();
-		if (FinalScore != 0 && branch != 0) {
-			return;
-		}
 		
-		if (FinalScore == 0) {
-			System.out.println("최종 점수 : 0");
-			System.out.println(" ");
-			System.out.println("점수가 0점이 되어 탈락했습니다ㅠㅠ");
-			System.out.println(" ");
-			System.out.println(" ");
+		if (branch != 0) {
+			return;
 		}
 
 		else if (branch == 0) {
 			System.out.println("최종 나뭇가지 개수 : 0");
 			System.out.println(" ");
-			System.out.println("나뭇가지가 0개가 되어 탈락했습니다ㅠㅠ");
+			System.out.println("나뭇가지가 다 떨어져서 탈락했습니다ㅠㅠ");
 			System.out.println(" ");
 			System.out.println(" ");
 		}
