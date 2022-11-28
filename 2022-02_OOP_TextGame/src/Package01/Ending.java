@@ -46,7 +46,7 @@ public class Ending extends Player{
 		System.out.println();
 		System.out.println("  . . .");
 		Main.pause.GetPause(1000);
-		System.out.println("최종점수는 "+ this.FinalScore+"입니다.");
+		System.out.println("최종점수는 "+ this.FinalScore+"점 입니다.");
 		System.out.println();
 		System.out.println();
 		System.out.println();

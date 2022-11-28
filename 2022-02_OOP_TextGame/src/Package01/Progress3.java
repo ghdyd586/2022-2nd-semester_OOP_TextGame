@@ -3,12 +3,16 @@ package Package01;
 public class Progress3 extends Progress {
 	// 초반부 진행상황 클래스 상속받아서 모든 필드 사용 가능
 	public void Third() {
+		sb.ShowScoreBoard(); // 미니게임 스코어 보드 출력
+		Main.pause.GetPause(2000); // 2초 일시정지
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 7단계");
 		System.out.println(t.OrdinaryTree[6]);
 		System.out.printf(" %s : 날씨가 점점 추워지고 있으니\n 몸 조심해!\n",p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
+		Main.pause.GetPause(2000);
+		sb.ShowFFB(); // 능력치 스코어 보드 출력
 		Main.pause.GetPause(2000);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 8단계");

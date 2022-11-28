@@ -10,6 +10,7 @@ public class Progress{
 	MiniGame3 MG3 = new MiniGame3(); // 미니게임3 객체 생성
 	static Progress2 pr2 = new Progress2(); // 중반부 진행 객체 생성
 	static Progress3 pr3 = new Progress3(); // 후반부 진행 객체 생성
+	static ScoreBoard sb = new ScoreBoard();
 
 	public void Set() {
 		p.getTreename(); // 나무 이름 입력 메소드 호출
@@ -32,6 +33,8 @@ public class Progress{
 	}
 
 	public void First() {
+		sb.ShowScoreBoard(); // 미니게임 스코어 보드 출력
+		Main.pause.GetPause(2000); // 2초 일시정지
 		System.out.println("┌────────────────────────┐");
 		System.out.println("      나무의 대화 1단계");
 		System.out.println(t.OrdinaryTree[0]);
@@ -85,11 +88,8 @@ public class Progress{
 			if(MG1.g1.returntool1() == true)
 			{
 				Opening.p1.SetBranchCnt(1); // 생명 증감
-				System.out.println(Opening.p1.GetBranchCnt());
 				Opening.p1.SetFlowerCnt(3); // 꽃 증감
-				System.out.println(Opening.p1.GetFlowerCnt());
 				Opening.p1.SetFruitCnt(2); // 열매 증감
-				System.out.println(Opening.p1.GetFruitCnt());
 				System.out.println("나뭇가지 1개 / 열매 1개 / 꽃 2개 획득! \n그리고 "+ MG1.g1.gettool1() + "보너스 적용! (추가 열매 1개 / 꽃 1개)");
 			}
 			else if(MG1.g1.returntool2() == true) {

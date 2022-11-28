@@ -338,6 +338,7 @@ public class MiniGame2 {
 			Opening.p1.SetFlowerCnt(1);
 			System.out.println("나뭇가지 1개 소멸! / 꽃 1개 획득!");
 		}
+		Progress.sb.SetMG2(this.mg2score);
 		System.out.println("미니게임2를 종료합니다.");
 	}
 

@@ -32,7 +32,7 @@ public class MiniGame1 {
 			System.out.println("         사 자 성 어 맞 추 기 \n            게임 방법 ");
 			System.out.println("\n    사자성어 앞 두 글자가 주어진다.\n    플레이어는 뒤의 두 글자를 맞춰야 한다.");
 			System.out.println("    3초 안에 정답 시 점수 2배,\n    5초 안에 정답 시 점수 1.5배,    \n    10초가 넘어가면 0점이다.");
-			System.out.println("    두 번 이상 틀리면 5점씩 감점 후 \n   다음 문제로 넘어간다.");
+			System.out.println("    두 번 연속으로 틀리면 5점씩 감점 후 \n   다음 문제로 넘어간다.");
 			System.out.println("    문제는 총 10문제 이며, \n    문제는 연속으로 주어진다.");
 			System.out.println();
 			System.out.println("      점 수 에 따 른 도 구 보 상");
@@ -72,8 +72,9 @@ public class MiniGame1 {
 					System.out.println("┌────────────────────────┐");
 					System.out.println("         잘 하셨어요!");
 					System.out.println("   지금부터는 난이도가 높아집니다!");
-					System.out.println("         최대 3배까지\n       점수를 획득할 수 있어요~");
+					System.out.println("   최대 3배까지\n    점수를 획득할 수 있어요~");
 					System.out.println("   계속 하시려면 \"그래\"를 입력 후 \n   엔터를 눌러주세요~ : ");
+					System.out.println("   아무거나 입력하면\n   이대로 게임을 종료합니다.");
 					System.out.println("└────────────────────────┘");
 					String input = Main.input.next();
 					if (input.equals("그래")) {
@@ -161,6 +162,7 @@ public class MiniGame1 {
 			g1.findtool3(); // 70점 미만 시 삽과 물뿌리개 획득
 		}
 		g1.printtool(); // 도구 획득 문구 출력
+		Progress.sb.SetMG1(this.mg1score); // 미니게임 1 스코어 저장
 		System.out.println("미니게임 1 종료힙니다.");
 		Main.pause.GetPause(2000); // 2초 일시정지
 		Player.pr.TalkwithTree(); // 나무와의 대화 메소드 호출

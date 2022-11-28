@@ -95,7 +95,8 @@ public class Progress2 extends Progress {
 			
 
 		}
-		
+		sb.ShowFFB(); // 능력치 스코어 보드 출력
+		Main.pause.GetPause(2000);
 		if (Opening.p1.GetBranchCnt()==0) {
 			Ending_Fail ef = new Ending_Fail();
 			ef.ShowFailFinal();
@@ -124,8 +125,8 @@ public class Progress2 extends Progress {
 			ef.ShowFailFinal();
 			System.exit(0);
 		}
-		
-		Main.pause.GetPause(2000);
+		sb.ShowScoreBoard(); // 미니게임 스코어 보드 출력
+		Main.pause.GetPause(2000); // 2초 일시정지
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 5단계");
 		System.out.println(t.OrdinaryTree[4]);
@@ -136,7 +137,7 @@ public class Progress2 extends Progress {
 		System.out.println("     남았다. 깔깔.");
 		System.out.println("└────────────────────────┘");
 		System.out.println("다음 단계로 넘어갑니다.");
-		Main.pause.GetPause(2000);
+		Main.pause.GetPause(2000); // 2초 일시정지
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 6단계");
 		System.out.println(t.OrdinaryTree[5]);

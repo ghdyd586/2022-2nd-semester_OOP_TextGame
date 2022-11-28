@@ -97,7 +97,7 @@ public class Player {
 		System.out.println(TREE.TreeforGuide2[0]);
 		System.out.println("           미니게임은 해당 게임이 실행될 때 마다 게임방법이 주어지니 잘 참고하면 된다.");
 		System.out.println("   나무와의 대화에는 혼잣말과 질문으로 구성되어 있으며, 혼잣말의 경우에는 아무것도 일어나지 않고");
-		System.out.println("   질문은 3~4개의 선택지가 주어지는데, 선택지에 따라 아이템 및 라이프 증감이 일어나니 잘 선택해 보자.");
+		System.out.println("   질문은 2~3개의 선택지가 주어지는데, 선택지에 따라 아이템 및 라이프 증감이 일어나니 잘 선택해 보자.");
 		System.out.println("└──────────────────────────────────────────────────────────────────────────┘");
 		System.out.println("다 읽으셨나요? 5초 뒤에 자동으로 본 게임이 시작됩니다!");
 		Main.pause.GetPause(5000); // 5초 일시 정지
