@@ -2,34 +2,34 @@ package Package01;
 
 public class Ending extends Player{
 	
-	int FinalScore = this.GetFinalScore(); // 총능력치 : 열매+꽃
 	String tree;
 	PlaceandTreename p = new PlaceandTreename();
 
+	
 	String tree() {
 		this.SetFinalScore();
 		if (p.place.equals("브라질")) {
-			if (FinalScore >= 10)
+			if (GetFinalScore()>= 36)
 				tree = "야자수나무";
-			else if (FinalScore > 5 && FinalScore < 10)
+			else if (GetFinalScore() >= 29 && GetFinalScore() <= 35)
 				tree = "바오밥나무";
-			else if (FinalScore < 5)
+			else if (GetFinalScore() <= 21)
 				tree = "잡종나무";
 		}
 		if (p.place.equals("한국")) {
-			if (FinalScore >= 10)
+			if (GetFinalScore() >= 36)
 				tree = "무궁화나무";
-			else if (FinalScore > 5 && FinalScore < 10)
+			else if (GetFinalScore() >= 29 && GetFinalScore() <= 35)
 				tree = "벚꽃나무";
-			else if (FinalScore < 5)
+			else if (GetFinalScore() <= 21)
 				tree = "소나무";
 		}
 		if (p.place.equals("러시아")) {
-			if (FinalScore >= 10)
+			if (GetFinalScore() >= 36)
 				tree = "단풍나무";
-			else if (FinalScore > 5 && FinalScore < 10)
+			else if (GetFinalScore() >= 29 && GetFinalScore() <= 35)
 				tree = "자작나무";
-			else if (FinalScore < 5)
+			else if (GetFinalScore() <= 21)
 				tree = "앙상한나무";
 		}
 		return tree;
@@ -44,7 +44,7 @@ public class Ending extends Player{
 		System.out.println();
 		System.out.println("  . . .");
 		Main.pause.GetPause(1000);
-		System.out.println("최종점수는 "+ this.FinalScore+"입니다.");
+		System.out.println("최종점수는 "+ GetFinalScore()+"입니다.");
 		System.out.println();
 		System.out.println();
 		System.out.println();
@@ -53,7 +53,7 @@ public class Ending extends Player{
 		Main.pause.GetPause(500);
 
 
-		if (FinalScore >= 36) {
+		if (GetFinalScore()>= 36) {
 			System.out.println(Progress.t.TreeforEnding[0]);
 			Main.pause.GetPause(100);
 			System.out.printf("%s(이)가 심었던 %s(은)는 %s(이)가 되었다!!\n", Opening.p1.GetPlayerName(), p.treename, tree);
@@ -77,7 +77,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore > 29 && FinalScore < 35) {
+		else if (GetFinalScore() >= 29 && GetFinalScore() <= 35) {
 			System.out.println(Progress.t.TreeforEnding[1]);
 			Main.pause.GetPause(100);
 
@@ -102,7 +102,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore > 22 && FinalScore < 28) {
+		else if (GetFinalScore() >= 22 && GetFinalScore() <= 28) {
 			System.out.println(Progress.t.TreeforEnding[1]);
 			Main.pause.GetPause(100);
 
@@ -127,7 +127,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore <= 14) {
+		else if (GetFinalScore() <= 21) {
 			System.out.println(Progress.t.TreeforEnding[2]);
 			Main.pause.GetPause(100);
 

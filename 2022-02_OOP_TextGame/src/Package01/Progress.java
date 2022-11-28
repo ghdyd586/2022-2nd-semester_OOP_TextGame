@@ -10,8 +10,8 @@ public class Progress {
 	MiniGame2 MG2 = new MiniGame2(); // 미니게임2 객체 생성
 	MiniGame3 MG3 = new MiniGame3(); // 미니게임3 객체 생성
 	static Progress2 pr2 = new Progress2(); // 중반부 진행 객체 생성
-	static Progress3 pr3 = new Progress3(); // 후반부 진행 객체 생성
-
+	static Progress3 pr3 = new Progress3(); // 후반부 진행 객체 생성	
+	
 	public void Set() {
 		p.getTreename(); // 나무 이름 입력 메소드 호출
 		System.out.println("장소 설정을 하겠습니다.");
@@ -107,5 +107,6 @@ public class Progress {
 		Main.pause.GetPause(2000);
 		this.TalkwithTree(); // 진행도에 따라 중반부 진행상황으로 이동
 	}
+	
 
 }

@@ -10,7 +10,7 @@ public class Player {
 
 	public void SetFinalScore() {
 		this.FinalScore = this.FlowerCnt + (this.FruitCnt*2);
-		// 최종스코어 설정자(꽃 = 1점, 열매 = 2점으로 계산) 
+		 //최종스코어 설정자(꽃 = 1점, 열매 = 2점으로 계산) 
 	}
 	public int GetFinalScore() {
 		return this.FinalScore;

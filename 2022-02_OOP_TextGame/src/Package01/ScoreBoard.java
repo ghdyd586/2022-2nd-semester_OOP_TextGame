@@ -23,4 +23,10 @@ public class ScoreBoard {
 		System.out.println(" ");
 
 	}
+	
+	void showFFB(){
+		System.out.printf("나무가지 개수 : %d",Opening.p1.GetBranchCnt());
+		System.out.printf("열매 개수 : %d",Opening.p1.GetFruitCnt());
+		System.out.printf("꽃 개수 : %d",Opening.p1.GetFlowerCnt());
+	}
 }

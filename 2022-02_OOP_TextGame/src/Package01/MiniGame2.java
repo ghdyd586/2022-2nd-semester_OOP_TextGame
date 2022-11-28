@@ -17,6 +17,10 @@ public class MiniGame2 {
 	String[] SongList = { "strawberrymoon", "attention", "주저하는연인들을위해" };
 
 	PlaceandTreename pt = new PlaceandTreename();
+	
+	public double GetScore() {
+		return this.mg2score;
+	}// 미니게임 2 점수 접근자
 
 	public void SetScore() {
 		this.mg2score = 0;
@@ -306,6 +310,33 @@ public class MiniGame2 {
 			System.out.println("                최종점수 : " + mg2score + "점");
 			System.out.println("└───────────────────────────────────────────────────┘");
 
+		}
+		
+		if (mg2score >= 45) {
+			Opening.p1.SetBranchCnt(2);
+			Opening.p1.SetFruitCnt(2);
+			Opening.p1.SetFlowerCnt(2);
+			System.out.println("나뭇가지 2개 / 열매 2개 / 꽃 2개 획득!");
+		}
+		
+		else if (mg2score >=30 && mg2score <=44 ) {
+			Opening.p1.SetBranchCnt(1);
+			Opening.p1.SetFruitCnt(1);
+			Opening.p1.SetFlowerCnt(2);
+			System.out.println("나뭇가지 1개 / 열매 1개 / 꽃 2개 획득!");
+		}
+		
+		else if (mg2score >=15 && mg2score <30) {
+			
+			Opening.p1.SetBranchCnt(1);
+			Opening.p1.SetFlowerCnt(1);
+			System.out.println("열매 1개 / 꽃 1개 획득 !");
+		}
+		
+		else if (mg2score <15) {
+			Opening.p1.SetBranchCnt(-1);
+			Opening.p1.SetFlowerCnt(1);
+			System.out.println("나무가지 1개 차감! / 꽃 1개 획득!");
 		}
 		System.out.println("미니게임2를 종료합니다.");
 	}

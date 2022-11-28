@@ -110,6 +110,7 @@ public class Progress2 extends Progress {
 		Main.pause.GetPause(1500);
 		System.out.println("\n\n\n\n\n");
 		MG2.MG2Guide(); // 미니게임 2 클래스 삽입
+		
 		Main.pause.GetPause(2000);
 		System.out.println("┌────────────────────────┐");
 		System.out.println("       나무의 대화 5단계");
