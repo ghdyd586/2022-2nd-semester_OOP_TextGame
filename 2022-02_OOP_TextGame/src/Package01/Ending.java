@@ -11,27 +11,27 @@ public class Ending extends Player{
 	
 	String tree() {
 		if (p.place.equals("브라질")) {
-			if (FinalScore >= 10)
+			if (FinalScore >= 36)
 				tree = "야자수나무";
-			else if (FinalScore > 5 && FinalScore < 10)
+			else if (FinalScore >=22 && FinalScore < 36)
 				tree = "바오밥나무";
-			else if (FinalScore < 5)
+			else if (FinalScore < 22)
 				tree = "잡종나무";
 		}
 		if (p.place.equals("한국")) {
-			if (FinalScore >= 10)
+			if (FinalScore >= 36)
 				tree = "무궁화나무";
-			else if (FinalScore > 5 &&FinalScore < 10)
+			else if (FinalScore >=22 && FinalScore < 36)
 				tree = "벚꽃나무";
-			else if (FinalScore < 5)
+			else if (FinalScore < 22)
 				tree = "소나무";
 		}
 		if (p.place.equals("러시아")) {
-			if (FinalScore >= 10)
+			if (FinalScore >= 36)
 				tree = "단풍나무";
-			else if (FinalScore > 5 && FinalScore < 10)
+			else if (FinalScore >=22 && FinalScore < 36)
 				tree = "자작나무";
-			else if (FinalScore < 5)
+			else if (FinalScore < 22)
 				tree = "앙상한나무";
 		}
 		return tree;
