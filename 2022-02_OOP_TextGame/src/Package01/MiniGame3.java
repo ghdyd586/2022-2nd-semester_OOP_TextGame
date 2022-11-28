@@ -87,7 +87,7 @@ public class MiniGame3 {
 			System.out.println(".");
 			System.out.println(".");
 			
-			Progress.sb.SetMG3(this.MG3Score);
+			Progress.sb.SetMG3(MG3Score);
 			return false;
 
 		} else if (life == 0) {
