@@ -1,5 +1,11 @@
 package Package01;
+import java.io.File;
 
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
 public class Ending extends Player{
 	
 	int FinalScore;
@@ -159,6 +165,31 @@ public class Ending extends Player{
 	}
 
 	void endingCredit() {
+		try {
+			
+			File bgm;
+			AudioInputStream stream;
+			AudioFormat format;
+			DataLine.Info info;
+			
+			bgm = new File("treesongs/end.wav");
+			Clip clip;
+			
+			try {
+				stream = AudioSystem.getAudioInputStream(bgm);
+				format = stream.getFormat();
+				info = new DataLine.Info(Clip.class, format);
+				clip = (Clip) AudioSystem.getLine(info);
+				clip.open(stream);
+				clip.start();
+				
+			} catch (Exception e) {
+				
+			}
+		} catch (Exception e) {
+
+		}
+
 		System.out.println("┌─────────────────────────────────────────┐");
 		System.out.println("                역할 분배\n");
 		Main.pause.GetPause(700);

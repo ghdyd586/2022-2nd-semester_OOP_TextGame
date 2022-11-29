@@ -7,8 +7,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
+
 public class MiniGame2 {
 	private double mg2score;
 	public String usersinger;
