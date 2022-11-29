@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class MiniGame3 {
 	
-	private double MG3Score;
+	private static double MG3Score;
 
 	public double GetScore() {
 		return this.MG3Score;
@@ -35,7 +35,6 @@ public class MiniGame3 {
 	}
 
 	public static boolean checkAns(ArrayList<String> arr, String word, int life) {
-		double MG3Score;
 		String ansCheck = "";
 
 		for (String x : arr) {
@@ -74,7 +73,7 @@ public class MiniGame3 {
 			}
 
 			else if (MG3Score >= 5 && MG3Score < 15) {
-				Opening.p1.SetBranchcnt(-1);
+				Opening.p1.SetBranchCnt(-1);
 				Opening.p1.SetFlowerCnt(1);
 				System.out.println("총 점수는 " + MG3Score + "점 입니다!");
 				System.out.println();
@@ -93,7 +92,7 @@ public class MiniGame3 {
 		} else if (life == 0) {
 			System.out.println("벌레가 늘어났습니다ㅠ");
 			System.out.println();
-			Opening.p1.SetBranchcnt(-1);
+			Opening.p1.SetBranchCnt(-1);
 			Opening.p1.SetFlowerCnt(1);
 			
 			System.out.println("총 점수는 " + MG3Score + "점 입니다!");
@@ -156,7 +155,7 @@ public class MiniGame3 {
 				}
 
 				board(arr, life);
-
+				int index = 0;
 				while (go) {
 					System.out.println();
 					System.out.println("알파벳 대문자 하나를 입력하세요.");
@@ -172,15 +171,17 @@ public class MiniGame3 {
 							if (word.charAt(i) == letter) {
 								arr.remove(i);
 								arr.add(i, ans);
-								System.out.println("맞췄습니다.");
-								System.out.println();
-								System.out.println("벌레가 없어지고 있어요!");
-								System.out.println();
-								System.out.println("_____________________________");
-								System.out.println();
+								index = i;
 							}
 						}
-
+						if (word.charAt(index) == letter) {
+							System.out.println("맞췄습니다.");
+							System.out.println();
+							System.out.println("벌레가 없어지고 있어요!");
+							System.out.println();
+							System.out.println("_____________________________");
+							System.out.println();
+						}
 						if (!arr.contains(ans)) {
 							life -= 1;
 							System.out.println("틀렸습니다.");
@@ -191,7 +192,6 @@ public class MiniGame3 {
 							System.out.println();
 
 						}
-
 						board(arr, life);
 						System.out.println();
 					}
@@ -212,7 +212,7 @@ public class MiniGame3 {
 			System.out.println("  |       | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 45;
+			MG3Score = 45;
 
 		} else if (life == 7) {
 			System.out.println(" _\\_______/_ ");
@@ -223,7 +223,7 @@ public class MiniGame3 {
 			System.out.println("  |       | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 40;
+			MG3Score = 40;
 
 		} else if (life == 6) {
 			System.out.println(" _\\_______/_ ");
@@ -234,7 +234,7 @@ public class MiniGame3 {
 			System.out.println("  |       | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 35;
+			MG3Score = 35;
 
 		} else if (life == 5) {
 			System.out.println(" _\\_______/_ ");
@@ -245,7 +245,7 @@ public class MiniGame3 {
 			System.out.println("  |       | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 30;
+			MG3Score = 30;
 
 		} else if (life == 4) {
 			System.out.println(" _\\_______/_ ");
@@ -256,7 +256,7 @@ public class MiniGame3 {
 			System.out.println(" -|       | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 25;
+			MG3Score = 25;
 
 		} else if (life == 3) {
 			System.out.println(" _\\_______/_ ");
@@ -267,7 +267,7 @@ public class MiniGame3 {
 			System.out.println(" -|       | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 20;
+			MG3Score = 20;
 
 		} else if (life == 2) {
 			System.out.println(" _\\_______/_ ");
@@ -278,7 +278,7 @@ public class MiniGame3 {
 			System.out.println(" -|       | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 15;
+			MG3Score = 15;
 
 		} else if (life == 1) {
 			System.out.println(" _\\_______/_ ");
@@ -289,7 +289,7 @@ public class MiniGame3 {
 			System.out.println(" -| --    | ");
 			System.out.println("   _______ ");
 			System.out.println(" _/       \\_ ");
-			MG3Score += 10;
+			MG3Score = 10;
 
 		} else {
 			System.out.println(" _\\_______/_ ");
