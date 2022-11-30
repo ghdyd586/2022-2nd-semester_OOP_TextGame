@@ -79,7 +79,7 @@ public class Progress{
 		System.out.println("┌────────────────────────┐");
 		System.out.println("     나무의 대화 3단계");
 		System.out.println(t.OrdinaryTree[2]);
-		System.out.printf("  %s : 이 게임은 누가 만들었지?\n", p.treename);
+		System.out.printf(" %s : 이 게임은 누가 만들었지?\n", p.treename);
 		System.out.println("└────────────────────────┘");
 		System.out.println("이 게임의 제작자를 입력해보자 (---팀)(4글자) : ");
 		if (Main.input.next().equals("호우우팀")) {

@@ -1,6 +1,6 @@
 package Package01;
 
-public class GetTool extends Player {
+public class GetTool {
 	private String tool1 = "조경사 친구";
 	private String tool2 = "원예 공구 상자";
 	private String tool3 = "삽과 물뿌리개";

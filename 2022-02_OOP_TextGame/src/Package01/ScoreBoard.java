@@ -32,10 +32,10 @@ public class ScoreBoard {
 	public void ShowFFB(){
 		System.out.println("┌─────────────────────────────┐");
 		System.out.println("          중 간 점 검");
-		System.out.printf(" 나무가지 개수 : %d개\n",Opening.p1.GetBranchCnt());
-		System.out.printf(" 열매 개수 : %d개\n",Opening.p1.GetFruitCnt());
-		System.out.printf(" 꽃 개수 : %d개\n",Opening.p1.GetFlowerCnt());
-		System.out.printf(" 예상 점수 : %d점\n",Opening.p1.GetFlowerCnt() + (Opening.p1.GetFruitCnt()*2));
+		System.out.printf("    나무가지 개수 : %d개\n",Opening.p1.GetBranchCnt());
+		System.out.printf("    열매 개수 : %d개\n",Opening.p1.GetFruitCnt());
+		System.out.printf("    꽃 개수 : %d개\n",Opening.p1.GetFlowerCnt());
+		System.out.printf("    예상 점수 : %d점\n",Opening.p1.GetFlowerCnt() + (Opening.p1.GetFruitCnt()*2));
 		System.out.println("└─────────────────────────────┘");
 	}
 }

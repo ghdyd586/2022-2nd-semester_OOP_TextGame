@@ -134,7 +134,7 @@ public class Progress3 extends Progress {
 		System.out.println("└────────────────────────┘");
 		Main.pause.GetPause(3000); // 3초 일시정지
 		System.out.println("┌────────────────────────┐");
-		System.out.println(Opening.p1.GetPlayerName() +" : 이제 학교에 제출해야 겠다.");
+		System.out.println(" "+Opening.p1.GetPlayerName() +" : 이제 학교에 제출해야 겠다.");
 		System.out.println("└────────────────────────┘");
 		Main.pause.GetPause(1500); // 1.5초 일시정지
 		Ending e = new Ending(MakeScore()); // 엔딩 객체 생성
