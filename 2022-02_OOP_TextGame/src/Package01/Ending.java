@@ -85,7 +85,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore > 29 && FinalScore < 35) {
+		else if (FinalScore >= 29 && FinalScore <= 35) {
 			System.out.println(Progress.t.TreeforEnding[1]);
 			Main.pause.GetPause(100);
 
@@ -110,7 +110,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore > 22 && FinalScore < 28) {
+		else if (FinalScore >= 22 && FinalScore <= 28) {
 			System.out.println(Progress.t.TreeforEnding[1]);
 			Main.pause.GetPause(100);
 
@@ -135,7 +135,7 @@ public class Ending extends Player{
 			System.out.println("└───────────────────────────────┘");
 		}
 
-		else if (FinalScore <= 14) {
+		else if (FinalScore < 22) {
 			System.out.println(Progress.t.TreeforEnding[2]);
 			Main.pause.GetPause(100);
 
